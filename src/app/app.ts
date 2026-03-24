@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  standalone: false,
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: false 
 })
-export class App {
-  protected readonly title = signal('SmartHomeProjectFront');
-}
+export class AppComponent {}

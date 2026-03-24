@@ -33,11 +33,31 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/main.css",
+              "src/assets/css/noscript.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/fontawesome-all.min.css"
+            ],
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery.dropotron.min.js",
+              "src/assets/js/jquery.scrolly.min.js",
+              "src/assets/js/jquery.scrollex.min.js",
+              "src/assets/js/browser.min.js",
+              "src/assets/js/breakpoints.min.js",
+              "src/assets/js/util.js",
+              "src/assets/js/main.js",
+              "src/assets/js/select2.min.js"
             ]
           },
           "configurations": {
