@@ -1,0 +1,7 @@
+<div class="solution-card">
+  <h3>{{ data.title }}</h3>
+  <p>{{ data.text }}</p>
+  <div class="icons">
+    <img *ngFor="let icon of data.icons" [src]="'/assets/images/icons/' + icon" alt="icon" />
+  </div>
+</div>

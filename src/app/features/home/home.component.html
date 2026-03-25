@@ -1,0 +1,15 @@
+<div id="solutions" class="solutions-section">
+  <h2>Our Solutions</h2>
+  <div class="solutions-grid">
+    <app-solution-card
+      *ngFor="let sol of solutions"
+      [data]="sol">
+    </app-solution-card>
+  </div>
+</div>
+<section id="plans" class="plans-section">
+  <h1>Choose Your <span>Smart Home Plan</span></h1>
+  <div class="plans-container">
+    <app-plan-card *ngFor="let plan of plans" [plan]="plan"></app-plan-card>
+  </div>
+</section>

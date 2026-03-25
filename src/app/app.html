@@ -3,21 +3,14 @@
   <!-- Header -->
   <div id="header">
     <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <!--<li><a href="index.html">Home</a></li>-->
-        <li><a (click)="scrollTo('header')">Home</a></li>
-        <li><a (click)="scrollTo('solutions')">Solutions</a></li>
-        <li><a (click)="scrollTo('plans')">Plans</a></li>
-        <li><a (click)="scrollTo('AbouUs')">About Us</a></li>
-        <li><a (click)="scrollTo('Contact')">Contact</a></li>
-      </ul>
-    </nav>
+    <app-navbar></app-navbar>
+
     <div id="language-switcher">
       <a href="index.html" title="English"><img src="/assets/images/flags/british.png" alt="EN" class="lang active"></a>
       <a href="index-fr.html" title="Français"><img src="/assets/images/flags/france.png" alt="FR" class="lang"></a>
       <a href="index-es.html" title="Español"><img src="/assets/images/flags/spain.png" alt="ES" class="lang"></a>
     </div>
+
     <!-- Inner -->
     <div class="inner">
       <header>
@@ -30,180 +23,18 @@
   </div>
 
   <!-- Solutions -->
-  <section id="solutions" class="solution-section">
-    <div class="solution-title">
-      <h2>Smart Home Solutions Tailored for You</h2>
-      <p>Integrate your devices or add new smart technology to make your home more comfortable, secure, and <span style="color: #c9a227;">energy</span>-<span style="color: #61c927;">efficient</span>.</p>
-    </div>
-    <div class="solution-container">
-      <div class="solution-card">
-        <div class="icon"><img src="/assets/images/icons/conexion50y.png" /></div>
-        <div class="h2"><h2>Integration</h2></div>
-        <hr>
-        <p>Use devices you already own, like Alexa or Google Home, to control your home effortlessly.</p>
-      </div>
+  <!-- Aquí reemplazamos la sección manual por HomeComponent -->
+  <app-home></app-home>
+  
+  <app-contact></app-contact>
 
-      <div class="solution-card">
-        <div class="icon"><img src="/assets/images/icons/lights50y.png" /></div>
-        <div class="h2"><h2>Lighting & Power</h2></div>
-        <hr>
-        <p>Automate bulbs, switches, and plugs to save energy and create the perfect ambiance.</p>
-      </div>
-
-      <div class="solution-card">
-        <div class="icon">
-          <img src="/assets/images/icons/climate50y.png" />
-          <img src="/assets/images/icons/eco50y.png" />
-        </div>
-        <div class="h2"><h2>Climate & Comfort</h2></div>
-        <hr>
-        <p>Smart thermostats, heaters, and fans keep your home comfortable and energy-efficient.</p>
-      </div>
-
-      <div class="solution-card">
-        <div class="icon"><img src="/assets/images/icons/cloud50y.png" /></div>
-        <div class="h2"><h2>Security & Safety</h2></div>
-        <hr>
-        <p>Protect your home with cameras, sensors, smart locks, and real-time alerts.</p>
-      </div>
-
-      <div class="solution-card">
-        <div class="icon"><img src="/assets/images/icons/autoplay50y.png" /></div>
-        <div class="h2"><h2>Custom Automations</h2></div>
-        <hr>
-        <p>Create personalized scenes and routines to make your home smarter and simpler.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Plans -->
-  <section id="plans" class="plans-section">
-    <h1>Choose Your <span>Smart Home Plan</span></h1>
-    <div class="plans-container">
-      <div class="plan-card">
-        <div class="card-header">
-          <div class="icon"><img src="/assets/images/icons/mic30y.png" /></div>
-          <h2>Starter</h2>
-        </div>
-        <div class="price">Starting at $299 CAD</div>
-        <hr>
-        <p>• Voice assistant integration.</p>
-        <p>• Installation of 1–2 smart devices.</p>
-        <p>• Basic configuration & system testing.</p>
-        <p class="ideal">Perfect for first-time smart home users.</p>
-        <div class="card-footer">
-          <p class="note">(*) Smart devices sold separately.</p>
-          <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Book Free Consultation</button>
-        </div>
-      </div>
-
-      <div class="plan-card">
-        <div class="card-header">
-          <div class="icon"><img src="/assets/images/icons/devices30y.png" /></div>
-          <h2>Essentials</h2>
-        </div>
-        <div class="price">Starting at $599 CAD</div>
-        <hr>
-        <p>• Control 3–5 smart devices.</p>
-        <p>• Smartphone & voice integration.</p>
-        <p>• Custom automation scenes.</p>
-        <p class="ideal">Great for upgrading key areas of your home.</p>
-        <div class="card-footer">
-          <p class="note">(*) Smart devices sold separately.</p>
-          <button>Book Free Consultation</button>
-        </div>
-      </div>
-
-      <div class="plan-card">
-        <div class="card-header">
-          <div class="icon"><img src="/assets/images/icons/smartHome30y.png" /></div>
-          <h2>Full Smart</h2>
-        </div>
-        <div class="price">Custom Quote</div>
-        <hr>
-        <p>• Full-home smart integration.</p>
-        <p>• Advanced automations & remote access.</p>
-        <p>• Complete voice + app control.</p>
-        <p class="ideal">Designed for a fully connected smart home.</p>
-        <div class="card-footer">
-          <p class="note">(*) Smart devices sold separately.</p>
-          <button>Request Custom Plan</button>
-        </div>
-      </div>
-
-      <div class="plan-card">
-        <div class="card-header">
-          <div class="icon"><img src="/assets/images/icons/custom30y.png" /></div>
-          <h2>Customize</h2>
-        </div>
-        <div class="price">Flexible Pricing</div>
-        <hr>
-        <p>• Installation & setup per device.</p>
-        <p>• Add switches, cameras, plugs & tailor-made automations.</p>
-        <p class="ideal">Perfect for a personalized smart home setup.</p>
-        <div class="card-footer">
-          <p class="note">(*) Smart devices sold separately.</p>
-          <button>Build Your Setup</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us -->
-  <section id="AbouUs" class="about-section">
-    <div class="wrapper style2">
-      <header class="about-title">
-        <h2>About Us</h2>
-        <p>At ZentrixNest, we transform modern homes and spaces into intelligent, connected, and efficient environments. We specialize in <strong style="color: #f5c000">smart home automation and device configuration</strong>, integrating lighting, climate control, security, voice control, and remote monitoring from your smartphone.</p>
-        <p>Our approach combines advanced technology, elegant design, and secure solutions, tailored to each client’s unique needs. Whether you are starting from scratch or upgrading your current setup, we help you create a home that is more comfortable, secure, and efficient.</p>
-        <p>At ZentrixNest, we believe a smart home isn’t just controlled—it’s enjoyed, which is why we provide intuitive, reliable, and aesthetically elegant solutions that seamlessly fit your lifestyle.</p>
-      </header>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="Contact" class="contact-section">
-    <div class="wrapper style2">
-      <h2>Contact Us</h2>
-      <form id="contactForm" class="contactForm" action="#" method="post">
-        <div class="row">
-          <div class="col-6">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-          </div>
-          <div class="col-6">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
-          </div>
-        </div>
-        <label for="devices">Select your devices</label>
-        <select id="devices" multiple="multiple" style="width: 100%;">
-          <option value="alexa">Alexa</option>
-          <option value="google_home">Google Home</option>
-          <option value="smart_bulb">Smart Bulb</option>
-          <option value="smart_plug">Smart Plug</option>
-          <option value="thermostat">Thermostat</option>
-          <option value="camera">Camera</option>
-        </select>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write your message here" rows="3" required></textarea>
-        <div id="formError" style="color: #f5c000; margin: 10px 0; font-weight: bold;"></div>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+  
 
   <!-- Footer -->
   <div id="footer">
     <hr />
     <div class="row">
       <div class="col-12">
-        <section class="contact">
-          <ul class="icons">
-            <li><a href="https://www.facebook.com/zentrixnest" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/zentrixnest" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-          </ul>
-        </section>
         <div class="copyright">
           <ul class="menu">
             <li>&copy; Untitled. All rights reserved.</li>
