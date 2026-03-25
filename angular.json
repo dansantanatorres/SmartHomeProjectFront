@@ -86,6 +86,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "host": "0.0.0.0",
+            "allowedHosts": ["abdicative-snobbily-tora.ngrok-free.dev"]
+          },
           "configurations": {
             "production": {
               "buildTarget": "SmartHomeProjectFront:build:production"

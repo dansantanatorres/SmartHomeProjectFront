@@ -5,11 +5,12 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a href="index.html" class="scrolly">Home</a></li>
-        <li><a href="#solutions" class="scrolly">Solutions</a></li>
-        <li><a href="#plans" class="scrolly">Plans</a></li>
-        <li><a href="#AbouUs" class="scrolly">About Us</a></li>
-        <li><a href="#Contact" class="scrolly">Contact</a></li>
+        <!--<li><a href="index.html">Home</a></li>-->
+        <li><a (click)="scrollTo('header')">Home</a></li>
+        <li><a (click)="scrollTo('solutions')">Solutions</a></li>
+        <li><a (click)="scrollTo('plans')">Plans</a></li>
+        <li><a (click)="scrollTo('AbouUs')">About Us</a></li>
+        <li><a (click)="scrollTo('Contact')">Contact</a></li>
       </ul>
     </nav>
     <div id="language-switcher">
@@ -20,7 +21,7 @@
     <!-- Inner -->
     <div class="inner">
       <header>
-        <a href="#solutions" class="scrolly"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>
+        <a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>
         <p class="hero-slogan">
           Smart Home. <span>Time to Enjoy It.</span>
         </p>
