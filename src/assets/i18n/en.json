@@ -1,0 +1,67 @@
+{
+  "HOME": {
+    "SOLUTIONS": {
+      "TITLE": "Smart Home Solutions Tailored for You",
+      "SUBTITLE_1": "Integrate your devices or add new smart technology to make your home more comfortable, secure, and ",
+      "SUBTITLE_ENERGY": "energy",
+      "SUBTITLE_EFFICIENT": "efficient",
+      "SUBTITLE_2": "."
+    },
+    "SOLUTION_CARDS": {
+      "S1": { "TITLE": "Integration", "TEXT": "Use devices you already own, like Alexa or Google Home, to control your home effortlessly." },
+      "S2": { "TITLE": "Lighting & Power", "TEXT": "Automate bulbs, switches, and plugs to save energy and create the perfect ambiance." },
+      "S3": { "TITLE": "Climate & Comfort", "TEXT": "Smart thermostats, heaters, and fans keep your home comfortable and energy-efficient." },
+      "S4": { "TITLE": "Security & Safety", "TEXT": "Protect your home with cameras, sensors, smart locks, and real-time alerts." },
+      "S5": { "TITLE": "Custom Automations", "TEXT": "Create personalized scenes and routines to make your home smarter and simpler." }
+    },
+    "PLANS": {
+      "TITLE_1": "Choose Your",
+      "TITLE_2": "Smart Home Plan"
+    },
+    "PLAN_CARDS": {
+      "NOTE": "(*) Please note that smart devices are not included in the service price and are sold separately.",
+      "BUTTON_CONSULT": "Book Free Consultation",
+      "BUTTON_CUSTOM": "Request Custom Plan",
+      "BUTTON_BUILD": "Build Your Setup",
+      "P1": {
+        "TITLE": "Starter",
+        "PRICE": "Starting at $299 CAD",
+        "F1": "Voice assistant integration.",
+        "F2": "Installation of 1–2 smart devices.",
+        "F3": "Basic configuration & system testing.",
+        "IDEAL": "Perfect for first-time smart home users."
+      },
+      "P2": {
+        "TITLE": "Essentials",
+        "PRICE": "Starting at $599 CAD",
+        "F1": "Control 3–5 smart devices.",
+        "F2": "Smartphone & voice integration.",
+        "F3": "Custom automation scenes.",
+        "IDEAL": "Great for upgrading key areas of your home."
+      },
+      "P3": {
+        "TITLE": "Full Smart",
+        "PRICE": "Custom Quote",
+        "F1": "Full-home smart integration.",
+        "F2": "Advanced automations & remote access.",
+        "F3": "Complete voice + app control.",
+        "IDEAL": "Designed for a fully connected smart home."
+      },
+      "P4": {
+        "TITLE": "Customize",
+        "PRICE": "Flexible Pricing",
+        "F1": "Installation & setup per device.",
+        "F2": "Add switches, cameras, plugs & tailor-made automations.",
+        "IDEAL": "Perfect for a personalized smart home setup."
+      }
+    },
+    "ABOUT": {
+      "TITLE": "About Us",
+      "P1_1": "At ZentrixNest, we transform modern homes and spaces into intelligent, connected, and efficient environments. We specialize in ",
+      "P1_HIGHLIGHT": "smart home automation and device configuration",
+      "P1_2": ", integrating lighting, climate control, security, voice control, and remote monitoring from your smartphone.",
+      "P2": "Our approach combines advanced technology, elegant design, and secure solutions, tailored to each client's unique needs. Whether you are starting from scratch or upgrading your current setup, we help you create a home that is more comfortable, secure, and efficient.",
+      "P3": "At ZentrixNest, we believe a smart home isn't just controlled—it's enjoyed, which is why we provide intuitive, reliable, and aesthetically elegant solutions that seamlessly fit your lifestyle."
+    }
+  }
+}

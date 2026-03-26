@@ -1,0 +1,11 @@
+<!-- language-switcher.component.html -->
+<!--<div class="lang-switcher">
+  <button (click)="changeLang('en')" [class.active]="current === 'en'">🇬🇧 EN</button>
+  <button (click)="changeLang('es')" [class.active]="current === 'es'">🇪🇸 ES</button>
+  <button (click)="changeLang('fr')" [class.active]="current === 'fr'">🇫🇷 FR</button>
+</div>-->
+<div id="language-switcher">
+  <a (click)="changeLang('en')" title="English"><img src="/assets/images/flags/british.png" alt="EN" class="lang active" [class.active]="current === 'en'"></a>
+  <a (click)="changeLang('fr')" title="Français"><img src="/assets/images/flags/france.png" alt="FR" class="lang" [class.active]="current === 'fr'"></a>
+  <a (click)="changeLang('es')" title="Español"><img src="/assets/images/flags/spain.png" alt="ES" class="lang" [class.active]="current === 'es'"></a>
+</div>

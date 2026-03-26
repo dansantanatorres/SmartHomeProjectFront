@@ -1,10 +1,23 @@
+// app-module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app';
+
+// ngx-translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
+
+// Standalone components
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './features/home/home.component';
-import { ContactComponent } from './features/contact/contact.component';
-import { CommonModule } from '@angular/common';
+import { LanguageSwitcherComponent } from './shared/components/language-switcher/language-switcher.component';
+
+// ✅ Loader SIN argumentos (OBLIGATORIO en v17)
+export function HttpLoaderFactory() {
+  return new TranslateHttpLoader();
+}
 
 @NgModule({
   declarations: [
@@ -12,9 +25,31 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+
+    // Standalone components
     NavbarComponent,
-    HomeComponent,    // home standalone
-    ContactComponent
+    HomeComponent,
+    LanguageSwitcherComponent,
+
+    // ngx-translate config
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [] // ✅ MUY IMPORTANTE: vacío
+      },
+      fallbackLang: 'en'
+    })
+  ],
+  providers: [
+    {
+      provide: TRANSLATE_HTTP_LOADER_CONFIG,
+      useValue: {
+        prefix: './assets/i18n/',
+        suffix: '.json'
+      }
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,67 @@
+{
+  "HOME": {
+    "SOLUTIONS": {
+      "TITLE": "Soluciones de Hogar Inteligente a tu Medida",
+      "SUBTITLE_1": "Integra tus dispositivos o agrega nueva tecnología inteligente para hacer tu hogar más cómodo, seguro y ",
+      "SUBTITLE_ENERGY": "eficiente",
+      "SUBTITLE_EFFICIENT": "energéticamente",
+      "SUBTITLE_2": "."
+    },
+    "SOLUTION_CARDS": {
+      "S1": { "TITLE": "Integración", "TEXT": "Usa dispositivos que ya tienes, como Alexa o Google Home, para controlar tu hogar sin esfuerzo." },
+      "S2": { "TITLE": "Iluminación y Energía", "TEXT": "Automatiza bombillas, interruptores y enchufes para ahorrar energía y crear el ambiente perfecto." },
+      "S3": { "TITLE": "Clima y Confort", "TEXT": "Termostatos, calefactores y ventiladores inteligentes mantienen tu hogar cómodo y eficiente." },
+      "S4": { "TITLE": "Seguridad y Protección", "TEXT": "Protege tu hogar con cámaras, sensores, cerraduras inteligentes y alertas en tiempo real." },
+      "S5": { "TITLE": "Automatizaciones Personalizadas", "TEXT": "Crea escenas y rutinas personalizadas para hacer tu hogar más inteligente y sencillo." }
+    },
+    "PLANS": {
+      "TITLE_1": "Elige tu",
+      "TITLE_2": "Plan de Hogar Inteligente"
+    },
+    "PLAN_CARDS": {
+      "NOTE": "(*) Ten en cuenta que los dispositivos inteligentes no están incluidos en el precio del servicio y se venden por separado.",
+      "BUTTON_CONSULT": "Reservar Consulta Gratuita",
+      "BUTTON_CUSTOM": "Solicitar Plan Personalizado",
+      "BUTTON_BUILD": "Arma tu Configuración",
+      "P1": {
+        "TITLE": "Inicial",
+        "PRICE": "Desde $299 CAD",
+        "F1": "Integración con asistente de voz.",
+        "F2": "Instalación de 1 a 2 dispositivos inteligentes.",
+        "F3": "Configuración básica y pruebas del sistema.",
+        "IDEAL": "Perfecto para quienes se inician en el hogar inteligente."
+      },
+      "P2": {
+        "TITLE": "Esencial",
+        "PRICE": "Desde $599 CAD",
+        "F1": "Control de 3 a 5 dispositivos inteligentes.",
+        "F2": "Integración con smartphone y voz.",
+        "F3": "Escenas de automatización personalizadas.",
+        "IDEAL": "Ideal para mejorar áreas clave de tu hogar."
+      },
+      "P3": {
+        "TITLE": "Hogar Completo",
+        "PRICE": "Cotización Personalizada",
+        "F1": "Integración inteligente de todo el hogar.",
+        "F2": "Automatizaciones avanzadas y acceso remoto.",
+        "F3": "Control completo por voz y app.",
+        "IDEAL": "Diseñado para un hogar completamente conectado."
+      },
+      "P4": {
+        "TITLE": "Personalizado",
+        "PRICE": "Precio Flexible",
+        "F1": "Instalación y configuración por dispositivo.",
+        "F2": "Agrega interruptores, cámaras, enchufes y automatizaciones a medida.",
+        "IDEAL": "Perfecto para una configuración de hogar inteligente a tu medida."
+      }
+    },
+    "ABOUT": {
+      "TITLE": "Sobre Nosotros",
+      "P1_1": "En ZentrixNest, transformamos hogares y espacios modernos en entornos inteligentes, conectados y eficientes. Nos especializamos en ",
+      "P1_HIGHLIGHT": "automatización del hogar inteligente y configuración de dispositivos",
+      "P1_2": ", integrando iluminación, control climático, seguridad, control por voz y monitoreo remoto desde tu smartphone.",
+      "P2": "Nuestro enfoque combina tecnología avanzada, diseño elegante y soluciones seguras, adaptadas a las necesidades únicas de cada cliente. Ya sea que estés empezando desde cero o mejorando tu configuración actual, te ayudamos a crear un hogar más cómodo, seguro y eficiente.",
+      "P3": "En ZentrixNest, creemos que un hogar inteligente no solo se controla, sino que se disfruta, por eso ofrecemos soluciones intuitivas, confiables y estéticamente elegantes que se adaptan perfectamente a tu estilo de vida."
+    }
+  }
+}
