@@ -1,4 +1,14 @@
 {
+  "HEADER":{
+    "TITLE": "LE TEMPS D'EN PROFITER"
+  },
+  "NAV": {
+    "HOME": "Accueil",
+    "SOLUTIONS": "Solutions",
+    "PLANS": "Plans",
+    "ABOUT": "À propos",
+    "CONTACT": "Contact"
+  },
   "HOME": {
     "SOLUTIONS": {
       "TITLE": "Solutions Domotiques Adaptées à Vos Besoins",
@@ -62,6 +72,33 @@
       "P1_2": ", intégrant l'éclairage, la climatisation, la sécurité, la commande vocale et la surveillance à distance depuis votre smartphone.",
       "P2": "Notre approche combine technologie avancée, design élégant et solutions sécurisées, adaptées aux besoins uniques de chaque client. Que vous partiez de zéro ou amélioriez votre installation actuelle, nous vous aidons à créer une maison plus confortable, sécurisée et efficace.",
       "P3": "Chez ZentrixNest, nous croyons qu'une maison intelligente ne se contrôle pas seulement — elle se vit, c'est pourquoi nous proposons des solutions intuitives, fiables et élégantes qui s'intègrent parfaitement à votre style de vie."
+    },
+    "CONTACT": {
+      "TITLE": "Contactez-nous",
+      "NAME": "Nom",
+      "EMAIL": "Email",
+      "DEVICES": "Sélectionnez vos appareils",
+      "DEVICES_PLACEHOLDER": "Sélectionner des appareils",
+      "MESSAGE": "Message",
+      "BUTTON": "Envoyer",
+
+      "DEVICES_OPTIONS": {
+        "ALEXA": "Alexa",
+        "GOOGLE_HOME": "Google Home",
+        "SMART_BULB": "Ampoule Intelligente",
+        "SMART_PLUG": "Prise Intelligente",
+        "THERMOSTAT": "Thermostat",
+        "CAMERA": "Caméra"
+      },
+
+      "ERRORS": {
+        "NAME_REQUIRED": "Le nom est requis.",
+        "EMAIL_REQUIRED": "L'email est requis.",
+        "EMAIL_INVALID": "Format d'email invalide.",
+        "MESSAGE_REQUIRED": "Le message est requis."
+      },
+
+      "SUCCESS": "Formulaire envoyé avec succès. Vérifiez la console."
     }
   }
 }

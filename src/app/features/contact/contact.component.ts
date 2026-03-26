@@ -1,51 +1,62 @@
-// contact.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   template: `
     <section id="Contact" class="contact-section">
       <div class="wrapper style2">
-        <h2>Contact Us</h2>
+        <h2>{{ 'HOME.CONTACT.TITLE' | translate }}</h2>
+
         <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contactForm">
-          
+
           <div class="row">
             <div class="col-6">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" [(ngModel)]="form.name" required />
+              <label>{{ 'HOME.CONTACT.NAME' | translate }}</label>
+              <input type="text" name="name" [(ngModel)]="form.name" required />
             </div>
+
             <div class="col-6">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" [(ngModel)]="form.email" required />
+              <label>{{ 'HOME.CONTACT.EMAIL' | translate }}</label>
+              <input type="email" name="email" [(ngModel)]="form.email" required />
             </div>
           </div>
 
-          <label for="devices">Select your devices</label>
+          <label>{{ 'HOME.CONTACT.DEVICES' | translate }}</label>
+
           <div class="multi-select-dropdown" (click)="toggleDropdown()">
             <div class="selected-items">
-              {{ form.devices.length ? form.devices.join(', ') : 'Select Devices' }}
+              {{ form.devices.length 
+                  ? form.devices.join(', ') 
+                  : ('HOME.CONTACT.DEVICES_PLACEHOLDER' | translate) }}
             </div>
+
             <div *ngIf="dropdownOpen" class="dropdown-options">
               <label *ngFor="let device of devicesOptions">
-                <input type="checkbox" [value]="device" [checked]="form.devices.includes(device)"
+                <input type="checkbox"
+                       [value]="device.value"
+                       [checked]="form.devices.includes(device.value)"
                        (change)="onDeviceChange($event)" />
-                {{ device }}
+                {{ device.label }}
               </label>
             </div>
           </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" [(ngModel)]="form.message" rows="3" required></textarea>
+          <label>{{ 'HOME.CONTACT.MESSAGE' | translate }}</label>
+          <textarea name="message" [(ngModel)]="form.message" rows="3" required></textarea>
 
-          <div id="formError" style="color:#f5c000; margin:10px 0; font-weight:bold;">
+          <div style="color:#f5c000; margin:10px 0; font-weight:bold;">
             {{ formError }}
           </div>
 
-          <button type="submit">Send</button>
+          <button type="submit">
+            {{ 'HOME.CONTACT.BUTTON' | translate }}
+          </button>
+
         </form>
       </div>
     </section>
@@ -59,6 +70,9 @@ import { FormsModule } from '@angular/forms';
   `]
 })
 export class ContactComponent {
+
+  constructor(private translate: TranslateService) {}
+
   form = {
     name: '',
     email: '',
@@ -67,9 +81,19 @@ export class ContactComponent {
   };
 
   formError = '';
-
-  devicesOptions = ['Alexa', 'Google Home', 'Smart Bulb', 'Smart Plug', 'Thermostat', 'Camera'];
   dropdownOpen = false;
+
+  // 🔥 Devices traducidos dinámicamente
+  get devicesOptions() {
+    return [
+      { value: 'Alexa', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.ALEXA') },
+      { value: 'Google Home', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.GOOGLE_HOME') },
+      { value: 'Smart Bulb', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.SMART_BULB') },
+      { value: 'Smart Plug', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.SMART_PLUG') },
+      { value: 'Thermostat', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.THERMOSTAT') },
+      { value: 'Camera', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.CAMERA') }
+    ];
+  }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -77,6 +101,7 @@ export class ContactComponent {
 
   onDeviceChange(event: any) {
     const value = event.target.value;
+
     if (event.target.checked) {
       if (!this.form.devices.includes(value)) this.form.devices.push(value);
     } else {
@@ -85,42 +110,28 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    // Validaciones
     const { name, email, message } = this.form;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    /*if (!name && !email && !message) {
-      this.formError = "All fields are required.";
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      this.formError = "Please enter a valid email, e.g.: user@domain.com";
-      return;
-    }*/
-
-      // Generar errores individuales
     let errors: string[] = [];
-    if (!name.trim()) errors.push('Name is required.');
-    if (!email.trim()) errors.push('Email is required.');
-    else if (!emailRegex.test(email)) errors.push('Invalid email format.');
-    if (!message.trim()) errors.push('Message is required.');
 
-    // Mostrar todos los errores juntos
+    if (!name.trim()) errors.push(this.translate.instant('HOME.CONTACT.ERRORS.NAME_REQUIRED'));
+    if (!email.trim()) errors.push(this.translate.instant('HOME.CONTACT.ERRORS.EMAIL_REQUIRED'));
+    else if (!emailRegex.test(email)) errors.push(this.translate.instant('HOME.CONTACT.ERRORS.EMAIL_INVALID'));
+    if (!message.trim()) errors.push(this.translate.instant('HOME.CONTACT.ERRORS.MESSAGE_REQUIRED'));
+
     this.formError = errors.join(' ');
 
     if (errors.length === 0) {
       console.log('FORM COMPLETO:', this.form);
-      alert('Formulario enviado. Revisa la consola.');
-      // Aquí podrías limpiar el form si quieres:
-       this.form = { name: '', email: '', devices: [], message: '' };
-    }
-    else
-    {
+      alert(this.translate.instant('HOME.CONTACT.SUCCESS'));
+
+      this.form = { name: '', email: '', devices: [], message: '' };
+    } else {
       console.log('FORM ERROR:', this.formError);
       alert(this.formError);
     }
+
     this.formError = '';
-    
   }
 }

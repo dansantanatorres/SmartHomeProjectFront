@@ -1,4 +1,14 @@
 {
+  "HEADER":{
+    "TITLE": "ES MOMENTO DE DISFRUTAR TU HOGAR"
+  },
+  "NAV": {
+    "HOME": "Inicio",
+    "SOLUTIONS": "Soluciones",
+    "PLANS": "Planes",
+    "ABOUT": "Quiénes Somos",
+    "CONTACT": "Contáctanos"
+  },
   "HOME": {
     "SOLUTIONS": {
       "TITLE": "Soluciones de Hogar Inteligente a tu Medida",
@@ -62,6 +72,33 @@
       "P1_2": ", integrando iluminación, control climático, seguridad, control por voz y monitoreo remoto desde tu smartphone.",
       "P2": "Nuestro enfoque combina tecnología avanzada, diseño elegante y soluciones seguras, adaptadas a las necesidades únicas de cada cliente. Ya sea que estés empezando desde cero o mejorando tu configuración actual, te ayudamos a crear un hogar más cómodo, seguro y eficiente.",
       "P3": "En ZentrixNest, creemos que un hogar inteligente no solo se controla, sino que se disfruta, por eso ofrecemos soluciones intuitivas, confiables y estéticamente elegantes que se adaptan perfectamente a tu estilo de vida."
+    },
+    "CONTACT": {
+      "TITLE": "Contáctanos",
+      "NAME": "Nombre",
+      "EMAIL": "Correo electrónico",
+      "DEVICES": "Selecciona tus dispositivos",
+      "DEVICES_PLACEHOLDER": "Seleccionar dispositivos",
+      "MESSAGE": "Mensaje",
+      "BUTTON": "Enviar",
+
+      "DEVICES_OPTIONS": {
+        "ALEXA": "Alexa",
+        "GOOGLE_HOME": "Google Home",
+        "SMART_BULB": "Bombilla Inteligente",
+        "SMART_PLUG": "Enchufe Inteligente",
+        "THERMOSTAT": "Termostato",
+        "CAMERA": "Cámara"
+      },
+
+      "ERRORS": {
+        "NAME_REQUIRED": "El nombre es obligatorio.",
+        "EMAIL_REQUIRED": "El correo electrónico es obligatorio.",
+        "EMAIL_INVALID": "Formato de correo inválido.",
+        "MESSAGE_REQUIRED": "El mensaje es obligatorio."
+      },
+
+      "SUCCESS": "Formulario enviado correctamente. Revisa la consola."
     }
   }
 }

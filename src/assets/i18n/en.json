@@ -1,4 +1,14 @@
 {
+  "HEADER":{
+    "TITLE": "TIME TO ENJOY IT"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "SOLUTIONS": "Solutions",
+    "PLANS": "Plans",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact"
+  },
   "HOME": {
     "SOLUTIONS": {
       "TITLE": "Smart Home Solutions Tailored for You",
@@ -62,6 +72,33 @@
       "P1_2": ", integrating lighting, climate control, security, voice control, and remote monitoring from your smartphone.",
       "P2": "Our approach combines advanced technology, elegant design, and secure solutions, tailored to each client's unique needs. Whether you are starting from scratch or upgrading your current setup, we help you create a home that is more comfortable, secure, and efficient.",
       "P3": "At ZentrixNest, we believe a smart home isn't just controlled—it's enjoyed, which is why we provide intuitive, reliable, and aesthetically elegant solutions that seamlessly fit your lifestyle."
+    },
+    "CONTACT": {
+      "TITLE": "Contact Us",
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "DEVICES": "Select your devices",
+      "DEVICES_PLACEHOLDER": "Select Devices",
+      "MESSAGE": "Message",
+      "BUTTON": "Send",
+
+      "DEVICES_OPTIONS": {
+        "ALEXA": "Alexa",
+        "GOOGLE_HOME": "Google Home",
+        "SMART_BULB": "Smart Bulb",
+        "SMART_PLUG": "Smart Plug",
+        "THERMOSTAT": "Thermostat",
+        "CAMERA": "Camera"
+      },
+
+      "ERRORS": {
+        "NAME_REQUIRED": "Name is required.",
+        "EMAIL_REQUIRED": "Email is required.",
+        "EMAIL_INVALID": "Invalid email format.",
+        "MESSAGE_REQUIRED": "Message is required."
+      },
+
+      "SUCCESS": "Form submitted successfully. Check console."
     }
   }
 }
