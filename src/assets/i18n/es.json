@@ -95,8 +95,10 @@
         "NAME_REQUIRED": "El nombre es obligatorio.",
         "EMAIL_REQUIRED": "El correo electrónico es obligatorio.",
         "EMAIL_INVALID": "Formato de correo inválido.",
-        "MESSAGE_REQUIRED": "El mensaje es obligatorio."
+        "MESSAGE_REQUIRED": "El mensaje es obligatorio.",
+        "GENERIC": "Error al enviar. Intenta más tarde."
       },
+      "SENDING": "Enviando...",
 
       "SUCCESS": "Formulario enviado correctamente. Revisa la consola."
     }

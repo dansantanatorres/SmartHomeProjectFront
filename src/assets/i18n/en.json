@@ -95,9 +95,11 @@
         "NAME_REQUIRED": "Name is required.",
         "EMAIL_REQUIRED": "Email is required.",
         "EMAIL_INVALID": "Invalid email format.",
-        "MESSAGE_REQUIRED": "Message is required."
+        "MESSAGE_REQUIRED": "Message is required.",
+        "GENERIC": "Failed to send. Please try again later."
       },
-
+      "SENDING": "Sending...",
+      
       "SUCCESS": "Form submitted successfully. Check console."
     }
   }

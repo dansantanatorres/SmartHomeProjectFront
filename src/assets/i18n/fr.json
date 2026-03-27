@@ -95,9 +95,11 @@
         "NAME_REQUIRED": "Le nom est requis.",
         "EMAIL_REQUIRED": "L'email est requis.",
         "EMAIL_INVALID": "Format d'email invalide.",
-        "MESSAGE_REQUIRED": "Le message est requis."
+        "MESSAGE_REQUIRED": "Le message est requis.",
+        "GENERIC": "Échec de l'envoi. Veuillez réessayer plus tard."
       },
-
+      "SENDING": "Envoi en cours...",
+      
       "SUCCESS": "Formulaire envoyé avec succès. Vérifiez la console."
     }
   }

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';                    
+import { ContactService } from '../../core/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -53,8 +55,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
             {{ formError }}
           </div>
 
-          <button type="submit">
-            {{ 'HOME.CONTACT.BUTTON' | translate }}
+          <button type="submit" [disabled]="isLoading">
+            {{ isLoading 
+                ? ('HOME.CONTACT.SENDING' | translate) 
+                : ('HOME.CONTACT.BUTTON' | translate) }}
           </button>
 
         </form>
@@ -71,7 +75,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private contactService: ContactService) {}
 
   form = {
     name: '',
@@ -82,8 +86,9 @@ export class ContactComponent {
 
   formError = '';
   dropdownOpen = false;
+  isLoading = false;
 
-  // 🔥 Devices traducidos dinámicamente
+
   get devicesOptions() {
     return [
       { value: 'Alexa', label: this.translate.instant('HOME.CONTACT.DEVICES_OPTIONS.ALEXA') },
@@ -123,15 +128,25 @@ export class ContactComponent {
     this.formError = errors.join(' ');
 
     if (errors.length === 0) {
-      console.log('FORM COMPLETO:', this.form);
-      alert(this.translate.instant('HOME.CONTACT.SUCCESS'));
+      this.isLoading = true;  // 👈 deshabilita el botón
 
-      this.form = { name: '', email: '', devices: [], message: '' };
-    } else {
-      console.log('FORM ERROR:', this.formError);
-      alert(this.formError);
+      this.contactService.send({
+        name:    this.form.name.trim(),
+        email:   this.form.email.trim(),
+        message: this.form.message.trim(),
+        devices: this.form.devices
+      }).subscribe({
+        next: () => {
+          alert(this.translate.instant('HOME.CONTACT.SUCCESS'));
+          this.form = { name: '', email: '', devices: [], message: '' };
+          this.formError = '';
+          this.isLoading = false;
+        },
+        error: (err) => {
+          this.formError = err.error?.error ?? this.translate.instant('HOME.CONTACT.ERRORS.GENERIC');
+          this.isLoading = false;
+        }
+      });
     }
-
-    this.formError = '';
   }
 }
