@@ -1,8 +1,23 @@
-<div class="inner">
-    <header>
-    <a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>
-    <p class="hero-slogan">
-        Smart Home. <span>{{ 'HEADER.TITLE' | translate }}</span>
-    </p>
-    </header>
+<div class="inner video-section">
+    
+    <video id="hero-video" autoplay muted playsinline></video>
+    <!-- Video completo al inicio -->
+    <!--<video id="hero-video" autoplay muted playsinline>
+        <source src="/assets/images/smarthome-completo.mp4" type="video/mp4">
+    </video>-->
+
+    <!-- Loop infinito de la sección final -->
+    <!--<video id="hero-loop" autoplay muted loop playsinline>
+        <source src="/assets/images/smarthome-loop.mp4" type="video/mp4">
+    </video>-->
+    
+    <div class="overlay">
+        <header>
+            <!--<a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>-->
+            <p class="hero-slogan">
+                Smart Home. <span>{{ 'HEADER.TITLE' | translate }}</span>
+            </p>
+        </header>
+    </div>
+    
 </div>

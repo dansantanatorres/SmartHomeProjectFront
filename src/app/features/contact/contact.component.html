@@ -1,0 +1,54 @@
+<section id="Contact" class="contact-section">
+    <div class="wrapper style2">
+    <h2>{{ 'HOME.CONTACT.TITLE' | translate }}</h2>
+
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contactForm">
+
+        <div class="row">
+        <div class="col-6">
+            <label>{{ 'HOME.CONTACT.NAME' | translate }}</label>
+            <input type="text" name="name" [(ngModel)]="form.name" required />
+        </div>
+
+        <div class="col-6">
+            <label>{{ 'HOME.CONTACT.EMAIL' | translate }}</label>
+            <input type="email" name="email" [(ngModel)]="form.email" required />
+        </div>
+        </div>
+
+        <label>{{ 'HOME.CONTACT.DEVICES' | translate }}</label>
+
+        <div class="multi-select-dropdown" (click)="toggleDropdown()">
+        <div class="selected-items">
+            {{ form.devices.length 
+                ? form.devices.join(', ') 
+                : ('HOME.CONTACT.DEVICES_PLACEHOLDER' | translate) }}
+        </div>
+
+        <div *ngIf="dropdownOpen" class="dropdown-options">
+            <label *ngFor="let device of devicesOptions">
+            <input type="checkbox"
+                    [value]="device.value"
+                    [checked]="form.devices.includes(device.value)"
+                    (change)="onDeviceChange($event)" />
+            {{ device.label }}
+            </label>
+        </div>
+        </div>
+
+        <label>{{ 'HOME.CONTACT.MESSAGE' | translate }}</label>
+        <textarea name="message" [(ngModel)]="form.message" rows="3" required></textarea>
+
+        <div style="color:#f5c000; margin:10px 0; font-weight:bold;">
+        {{ formError }}
+        </div>
+
+        <button type="submit" [disabled]="isLoading">
+        {{ isLoading 
+            ? ('HOME.CONTACT.SENDING' | translate) 
+            : ('HOME.CONTACT.BUTTON' | translate) }}
+        </button>
+
+    </form>
+    </div>
+</section>

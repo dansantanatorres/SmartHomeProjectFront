@@ -11,55 +11,7 @@ import { ContactComponent } from '../../features/contact/contact.component';
   standalone: true,
   imports: [CommonModule, SolutionCardComponent, PlanCardComponent, FormsModule, ContactComponent, TranslateModule],
   styleUrls: ['./home.component.scss'],
-  template: `
-    <!-- Solutions -->
-    <section id="solutions" class="solution-section">
-      <div class="solution-title">
-        <h2>{{ 'HOME.SOLUTIONS.TITLE' | translate }}</h2>
-        <p>
-          {{ 'HOME.SOLUTIONS.SUBTITLE_1' | translate }}
-          <span style="color: #c9a227;">{{ 'HOME.SOLUTIONS.SUBTITLE_ENERGY' | translate }}</span>-<span style="color: #61c927;">{{ 'HOME.SOLUTIONS.SUBTITLE_EFFICIENT' | translate }}</span>{{ 'HOME.SOLUTIONS.SUBTITLE_2' | translate }}
-        </p>
-      </div>
-
-      <div class="solution-container">
-        <app-solution-card 
-          *ngFor="let s of solutions" 
-          [data]="s">
-        </app-solution-card>
-      </div>
-    </section>
-
-    <!-- Plans -->
-    <section id="plans" class="plans-section">
-      <h1>{{ 'HOME.PLANS.TITLE_1' | translate }} <span>{{ 'HOME.PLANS.TITLE_2' | translate }}</span></h1>
-
-      <div class="plans-container">
-        <app-plan-card 
-          *ngFor="let p of plans" 
-          [data]="p">
-        </app-plan-card>
-      </div>
-    </section>
-
-    <!-- About Us -->
-    <section id="AbouUs" class="about-section">
-      <div class="wrapper style2">
-        <header class="about-title">
-          <h2>{{ 'HOME.ABOUT.TITLE' | translate }}</h2>
-          <p>
-            {{ 'HOME.ABOUT.P1_1' | translate }}
-            <strong style="color: #f5c000">{{ 'HOME.ABOUT.P1_HIGHLIGHT' | translate }}</strong>{{ 'HOME.ABOUT.P1_2' | translate }}
-          </p>
-          <p>{{ 'HOME.ABOUT.P2' | translate }}</p>
-          <p>{{ 'HOME.ABOUT.P3' | translate }}</p>
-        </header>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <app-contact></app-contact>
-  `
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {
 

@@ -1,0 +1,44 @@
+
+.video-section {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* capa oscura para que se vea bien el texto */
+.video-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Escala sin deformar */
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-video, .hero-video-loop {
+    position: absolute;   /* Para que quede detrás de otros elementos */
+    top: 0;
+    left: 0;
+    width: 100%;          /* Ocupa todo el ancho */
+    height: 100%;         /* Ocupa todo el alto */
+    object-fit: cover;    /* Escala sin deformar */
+    z-index: -1;          /* Para que otros elementos queden arriba */
+
+    transition: opacity 0.5s ease;
+}

@@ -2282,12 +2282,12 @@ input, select, textarea {
 		}*/
 		
 		/*efecto imagen fondo*/
-		body.homepage #header:after {
+		/*body.homepage #header:after {
 			content: '';
 			/*background: rgba(28, 9, 32, 1);*/
 			/*background: rgba(128, 103, 26, 0.7);*/
 			/*background: rgba(183, 138, 0, 0.7);*/
-			background: rgba(183, 138, 0, 0.26);
+			/*background: rgba(183, 138, 0, 0.26);
 			
 			display: block;
 			position: absolute;
@@ -2300,7 +2300,7 @@ input, select, textarea {
 			transition: none;
 			
 			animation: fadeOverlay 5s ease-in-out infinite;
-		}
+		}*/
 
 		
 		@keyframes fadeOverlay {
@@ -4031,7 +4031,7 @@ body {
   right: 15px;
   transform: translateY(-50%);
   display: flex;
-  flex-direction: column;  /* Vertical */
+  /*flex-direction: column;  /* Vertical */
   background: rgba(0,0,0,0.3);
   /*padding: 0.5em;*/
   border-radius: 8px;
@@ -4155,3 +4155,8 @@ body {
 		color: #f5c000;
 		text-align: center;
 	}
+
+	
+#header {
+  scroll-margin-top: 80px;
+}

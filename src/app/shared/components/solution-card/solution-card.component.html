@@ -1,7 +1,8 @@
 <div class="solution-card">
-  <h3>{{ data.title }}</h3>
-  <p>{{ data.text }}</p>
-  <div class="icons">
-    <img *ngFor="let icon of data.icons" [src]="'/assets/images/icons/' + icon" alt="icon" />
+  <div class="icon">
+    <img *ngFor="let icon of data.icons" [src]="'/assets/images/icons/' + icon" />
   </div>
+  <div class="h2"><h2>{{ data.title }}</h2></div>
+  <hr>
+  <p>{{ data.text }}</p>
 </div>
