@@ -5,42 +5,17 @@
     <!-- Nav -->
     <app-navbar></app-navbar>
 
-    <!--<div id="language-switcher">
-      <a href="index.html" title="English"><img src="/assets/images/flags/british.png" alt="EN" class="lang active"></a>
-      <a href="index-fr.html" title="Français"><img src="/assets/images/flags/france.png" alt="FR" class="lang"></a>
-      <a href="index-es.html" title="Español"><img src="/assets/images/flags/spain.png" alt="ES" class="lang"></a>
-    </div>-->
+    <!-- Language -->
     <app-language-switcher></app-language-switcher>
 
     <!-- Inner -->
-    <div class="inner">
-      <header>
-        <a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>
-        <p class="hero-slogan">
-          Smart Home. <span>{{ 'HEADER.TITLE' | translate }}</span>
-        </p>
-      </header>
-    </div>
+    <app-header></app-header>
   </div>
 
   <!-- Solutions -->
-  <!-- Aquí reemplazamos la sección manual por HomeComponent -->
   <app-home></app-home>
   
-
   <!-- Footer -->
-  <div id="footer">
-    <hr />
-    <div class="row">
-      <div class="col-12">
-        <div class="copyright">
-          <ul class="menu">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-footer></app-footer>
 
 </div>

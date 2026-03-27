@@ -102,5 +102,9 @@
       
       "SUCCESS": "Formulaire envoyé avec succès. Vérifiez la console."
     }
+  },
+  "FOOTER":{
+    "RIGHTS": "Sans titre. Tous droits réservés.",
+    "DESIGN": "Conception."
   }
 }

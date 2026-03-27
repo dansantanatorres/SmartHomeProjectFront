@@ -11,8 +11,10 @@ import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translat
 
 // Standalone components
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { LanguageSwitcherComponent } from './shared/components/language-switcher/language-switcher.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 // ✅ Loader SIN argumentos (OBLIGATORIO en v17)
 export function HttpLoaderFactory() {
@@ -29,6 +31,8 @@ export function HttpLoaderFactory() {
 
     // Standalone components
     NavbarComponent,
+    HeaderComponent,
+    FooterComponent,
     HomeComponent,
     LanguageSwitcherComponent,
 
