@@ -1,0 +1,92 @@
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10003 !important;
+  text-align: center;
+  padding: 1em 0;
+
+  // Desktop — ocultar hamburguesa
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
+
+    li a {
+      color: #c9a227;
+      font-weight: 400;
+      cursor: pointer;
+      padding: 0.5em;
+      border: 0;
+      text-decoration: none;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// Móvil
+@media screen and (max-width: 736px) {
+
+  nav#nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5em 1em;
+
+    // Mostrar hamburguesa
+    .hamburger {
+      display: block;
+      background: none;
+      border: none;
+      color: #c9a227;
+      font-size: 1.8em;
+      cursor: pointer;
+      z-index: 1001;
+      line-height: 1;
+      padding: 0;
+    }
+
+    // Ocultar ul por defecto
+    ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 44px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 0.5em 0;
+      margin: 0;
+
+      li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+
+        a {
+          display: block;
+          padding: 0.85em 1.5em;
+          text-align: left;
+          color: #c9a227;
+          font-weight: 400;
+        }
+      }
+
+      // Cuando está abierto
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}

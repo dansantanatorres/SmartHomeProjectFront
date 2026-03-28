@@ -1,4 +1,4 @@
-
+/*
 .video-section {
   position: relative;
   height: auto;
@@ -18,9 +18,9 @@
   position: relative;
   z-index: 2;
 }
-
+*/
 /* capa oscura para que se vea bien el texto */
-.video-section::after {
+/*.video-section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -28,17 +28,60 @@
   width: 100%;
   height: 100%;
   object-fit: cover;    /* Escala sin deformar */
-  background: rgba(0,0,0,0.3);
-}
+  /*background: rgba(0,0,0,0.3);
+}*/
 
+/*
 .hero-video, .hero-video-loop {
-    position: absolute;   /* Para que quede detrás de otros elementos */
+    position: absolute;  
     top: 0;
     left: 0;
-    width: 100%;          /* Ocupa todo el ancho */
-    height: 100%;         /* Ocupa todo el alto */
-    object-fit: cover;    /* Escala sin deformar */
-    z-index: -1;          /* Para que otros elementos queden arriba */
+    width: 100%;         
+    height: 100%;        
+    object-fit: cover;   
+    z-index: -1;         
 
     transition: opacity 0.5s ease;
+}*/
+
+
+// header.component.scss
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  video {
+    position: absolute;   // ← esto está comentado en tu código
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.5em; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    height: 60vh;   // más corto en móvil
+  }
 }

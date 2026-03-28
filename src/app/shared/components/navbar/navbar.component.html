@@ -1,5 +1,6 @@
 <nav id="nav">
-  <ul>
+  <button class="hamburger" (click)="toggleMenu()">☰</button>
+  <ul [class.open]="menuOpen">
     <li><a (click)="scrollTo('header')">{{ 'NAV.HOME' | translate }}</a></li>
     <li><a (click)="scrollTo('solutions')">{{ 'NAV.SOLUTIONS' | translate }}</a></li>
     <li><a (click)="scrollTo('plans')">{{ 'NAV.PLANS' | translate }}</a></li>
