@@ -671,7 +671,8 @@ input, select, textarea {
 		left: 0;
 		width: 100%;
 		text-align: center;
-		padding: 1em 0;
+		/*padding: 1em 0;*/
+		padding: 0.25em 0;
 		z-index: 10003 !important;
 		background-color: rgba(47, 47, 47, 0.9);
 
@@ -1591,11 +1592,11 @@ input, select, textarea {
 	#language-switcher {
 		position: fixed;
 		/*top: 45px;*/
-		top: 3.2em;
+		top: 2.5em;
 		right: 15px;
 		transform: translateY(-50%);
 		display: flex;
-		flex-direction: column;
+		/*flex-direction: column;*/
 		background: rgba(0,0,0,0.3);
 		border-radius: 8px;
 		z-index: 10009;
@@ -1723,5 +1724,31 @@ input, select, textarea {
     /*scroll-margin-top: 62px;*/
 	scroll-margin-top: 44px;
     padding-top: 0;        /* ← elimina el padding-top de 90px */
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #language-switcher {
+    position: fixed;
+    top: 0;                  /* ← mismo nivel que el nav */
+    right: 10px;             /* ← a la izquierda del hamburger (~44px) */
+    transform: none;
+    height: 50px;            /* ← misma altura del nav móvil */
+    flex-direction: row;     /* ← en fila */
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border-radius: 0;
+    z-index: 10004;
+  }
+
+  #language-switcher a {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  #language-switcher img {
+    width: 22px;
   }
 }

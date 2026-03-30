@@ -6,7 +6,8 @@ nav#nav {
   background: rgba(0, 0, 0, 0.9);
   z-index: 10003 !important;
   text-align: center;
-  padding: 1em 0;
+  /*padding: 1em 0;*/
+  padding: 0.25em 0;
 
   // Desktop — ocultar hamburguesa
   .hamburger {

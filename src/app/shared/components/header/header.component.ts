@@ -44,9 +44,9 @@ export class HeaderComponent implements AfterViewInit{
     }
   }*/
 
-    @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
+  @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
-  ngAfterViewInit(): void {
+  /*ngAfterViewInit(): void {
     const video = this.heroVideo.nativeElement;
 
     const introSrc = 'assets/videos/smarthome-completo.mp4';
@@ -63,7 +63,32 @@ export class HeaderComponent implements AfterViewInit{
       video.currentTime = 0;
       video.play().catch(err => console.error('Error al reproducir loop:', err));
     };
+  }*/
+ngAfterViewInit(): void {
+  const video = this.heroVideo.nativeElement;
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Móvil — un solo video en loop
+    video.src = 'assets/videos/smarthome-loop-vertical.mp4';
+    video.loop = true;
+    video.play().catch(err => console.error('Error:', err));
+
+  } else {
+    // Desktop — intro + loop
+    video.src = 'assets/videos/smarthome-completo.mp4';
+    video.play().catch(err => console.error('Error:', err));
+
+    video.onended = () => {
+      video.src = 'assets/videos/smarthome-loop.mp4';
+      video.loop = true;
+      video.currentTime = 0;
+      video.play().catch(err => console.error('Error loop:', err));
+    };
   }
+}
+
+
   /*scrollTo(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (!element) return;

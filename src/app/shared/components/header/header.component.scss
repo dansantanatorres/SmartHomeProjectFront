@@ -1,59 +1,14 @@
-/*
-.video-section {
-  position: relative;
-  height: auto;
-  overflow: hidden;
-}
+/****video extendido al maximo***/
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: relative;
-  z-index: 2;
-}
-*/
-/* capa oscura para que se vea bien el texto */
-/*.video-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* Escala sin deformar */
-  /*background: rgba(0,0,0,0.3);
-}*/
-
-/*
-.hero-video, .hero-video-loop {
-    position: absolute;  
-    top: 0;
-    left: 0;
-    width: 100%;         
-    height: 100%;        
-    object-fit: cover;   
-    z-index: -1;         
-
-    transition: opacity 0.5s ease;
-}*/
-
-
-// header.component.scss
-.video-section {
+/*.video-section {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 44px);  // ← resta la altura del nav
+  margin-top: 44px;             // ← empuja la sección debajo del nav
 
   video {
-    position: absolute;   // ← esto está comentado en tu código
-    top: 1.5em;
+    position: absolute;
+    top: 0;        // ← ya no necesita el 1.5em
     left: 0;
     width: 100%;
     height: 100%;
@@ -64,8 +19,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: 1.5em; left: 0;
-    width: 100%; height: 100%;
+    top: 0;        // ← igual, a 0
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.4);
     z-index: 1;
   }
@@ -82,6 +39,88 @@
 
 @media (max-width: 768px) {
   .video-section {
-    height: 60vh;   // más corto en móvil
+    height: calc(60vh - 62px);  // ← en móvil resta la altura del nav móvil
+    margin-top: 62px;
+  }
+}*/
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 44px);
+  margin-top: 44px;
+  overflow: hidden;
+  background: #000;            // ← bordes oscuros a los lados
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;               // ← no fuerza el ancho
+    height: 100%;              // ← llena el alto
+    min-width: unset;          // ← elimina el min-width que forzaba el estiramiento
+    object-fit: contain;       // ← mantiene proporción sin pixelar
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+
+  /*.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+  }*/
+
+  .overlay {
+    position: absolute;
+    top: 15%;
+    right: 8%;                         // ← borde derecho del contenedor
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align: right;
+    padding-right: 1.5em;             // ← pequeño margen del borde
+    max-width: 300px;                 // ← limita el ancho del texto
+  }
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    height: calc(100vh - 62px);   // ← full height en móvil también
+    margin-top: 62px;
+    background: #000;
+
+    video {
+      position: relative;
+      top: 40%;
+      //left: 50%;
+      transform: translate(-50%, -50%);
+      //width: 100%;                // ← ocupa todo el ancho
+      //height: auto;               // ← altura proporcional
+      min-height: 100%;           // ← garantiza que llene
+      object-fit: cover;          // ← cover en móvil portrait
+    }
+
+    .overlay {
+      top: 20%;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding-right: 0;
+      max-width: 90%;
+    }
   }
 }
