@@ -2,7 +2,7 @@
     <div class="wrapper style2">
     <h2>{{ 'HOME.CONTACT.TITLE' | translate }}</h2>
 
-    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contactForm">
+    <form #contactForm="ngForm" class="contactForm">
 
         <div class="row">
         <div class="col-6">
@@ -43,12 +43,16 @@
         {{ formError }}
         </div>
 
-        <button type="submit" [disabled]="isLoading">
+        <button type="button" (click)="onSubmit()" [disabled]="isLoading">
+             <span *ngIf="isLoading" class="btn-spinner"></span>
         {{ isLoading 
             ? ('HOME.CONTACT.SENDING' | translate) 
             : ('HOME.CONTACT.BUTTON' | translate) }}
         </button>
 
     </form>
+        <div *ngIf="showToast" class="toast" [class.error]="toastType === 'error'">
+            {{ toastMessage }}
+        </div>
     </div>
 </section>
