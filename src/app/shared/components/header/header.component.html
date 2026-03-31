@@ -1,8 +1,12 @@
 <div class="inner video-section">
     
-    <!--<video id="hero-video" autoplay muted playsinline></video>-->
-    <video #heroVideo autoplay muted playsinline></video>
-    
+    <!--<video #heroVideo autoplay muted playsinline></video>-->
+    <video #heroVideo autoplay muted playsinline preload="auto"></video>
+
+    <div class="play-overlay" #playOverlay (click)="startVideo()">
+        <div class="play-btn">▶</div>
+    </div>
+
     <div class="overlay">
         <header>
             <!--<a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>-->

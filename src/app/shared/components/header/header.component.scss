@@ -86,7 +86,7 @@
 
   .overlay {
     position: absolute;
-    top: 15%;
+    top: 17%;
     right: 8%;                         // ← borde derecho del contenedor
     transform: translateY(-50%);
     z-index: 2;
@@ -122,5 +122,23 @@
       padding-right: 0;
       max-width: 90%;
     }
+  }
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+
+  .play-btn {
+    font-size: 80px;
+    color: white;
+    opacity: 0.8;
   }
 }

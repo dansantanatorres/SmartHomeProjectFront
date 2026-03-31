@@ -9,42 +9,8 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeaderComponent implements AfterViewInit{
 
-    /*ngAfterViewInit()
-    {
-      const video = document.getElementById('hero-video') as HTMLVideoElement;
-
-      if (video) {
-        const introSrc = 'assets/videos/smarthome-completo.mp4';
-        const loopSrc = 'assets/videos/smarthome-loop.mp4';
-
-        // 1. Cargar intro
-        video.src = introSrc;
-        video.play();
-
-        // 2. Cuando termina el intro → cambiar al loop
-        video.onended = () => {
-          video.src = loopSrc;
-          video.loop = true;
-          video.currentTime = 0;
-          video.play();
-
-          // 3. Asegurar loop infinito (extra seguridad)
-          video.onended = () => {
-            video.currentTime = 0;
-            video.play();
-          };
-        };
-      }
-    }*/
-
-  /*scrollTo(sectionId: string) {
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }*/
-
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
+  @ViewChild('playOverlay') playOverlay!: ElementRef;
 
   /*ngAfterViewInit(): void {
     const video = this.heroVideo.nativeElement;
@@ -64,58 +30,40 @@ export class HeaderComponent implements AfterViewInit{
       video.play().catch(err => console.error('Error al reproducir loop:', err));
     };
   }*/
-ngAfterViewInit(): void {
-  const video = this.heroVideo.nativeElement;
-  const isMobile = window.innerWidth <= 768;
 
-  if (isMobile) {
-    // Móvil — un solo video en loop
-    video.src = 'assets/videos/smarthome-loop-vertical.mp4';
-    video.loop = true;
-    video.play().catch(err => console.error('Error:', err));
+    ngAfterViewInit(): void 
+    {
+      const video = this.heroVideo.nativeElement;
+      const isMobile = window.innerWidth <= 768;
 
-  } else {
-    // Desktop — intro + loop
-    video.src = 'assets/videos/smarthome-completo.mp4';
-    video.play().catch(err => console.error('Error:', err));
+      video.src = isMobile
+        ? 'assets/videos/smarthome-loop-vertical.mp4'
+        : 'assets/videos/smarthome-completo.mp4';
 
-    video.onended = () => {
-      video.src = 'assets/videos/smarthome-loop.mp4';
-      video.loop = true;
-      video.currentTime = 0;
-      video.play().catch(err => console.error('Error loop:', err));
-    };
-  }
-}
+      if (!isMobile) {
+        video.onended = () => {
+          video.src = 'assets/videos/smarthome-loop.mp4';
+          video.loop = true;
+          video.play().catch(() => {});
+        };
+      } else {
+        video.loop = true;
+      }
 
+      video.load();
+      video.play().then(() => {
+        // Autoplay funcionó — oculta el botón
+        this.playOverlay.nativeElement.style.display = 'none';
+      }).catch(() => {
+        // Autoplay bloqueado — muestra el botón
+        this.playOverlay.nativeElement.style.display = 'flex';
+      });
+    }
 
-  /*scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (!element) return;
+    startVideo(): void {
+      const video = this.heroVideo.nativeElement;
+      video.play();
+      this.playOverlay.nativeElement.style.display = 'none';
+    }
 
-    const offset = window.innerWidth < 768 ? 60 : 80;
-    const targetY = element.getBoundingClientRect().top + window.scrollY - offset;
-    const startY = window.scrollY;
-    const distance = Math.abs(targetY - startY);
-
-    // duración proporcional a la distancia
-    const baseDuration = 1000; // duración mínima 1s
-    const duration = baseDuration + distance * 2; // por ejemplo 2ms por px
-
-    const startTime = performance.now();
-
-    const animateScroll = (currentTime: number) => {
-      const elapsed = currentTime - startTime;
-      const t = Math.min(1, elapsed / duration);
-
-      // easing suave (opcional)
-      const ease = t * (2 - t); // puedes cambiar a lineal: ease = t;
-
-      window.scrollTo(0, startY + (targetY - startY) * ease);
-
-      if (t < 1) requestAnimationFrame(animateScroll);
-    };
-
-    requestAnimationFrame(animateScroll);
-  }*/
 }
