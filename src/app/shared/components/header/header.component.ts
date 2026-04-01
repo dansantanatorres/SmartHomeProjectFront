@@ -31,39 +31,46 @@ export class HeaderComponent implements AfterViewInit{
     };
   }*/
 
-    ngAfterViewInit(): void 
-    {
-      const video = this.heroVideo.nativeElement;
-      const isMobile = window.innerWidth <= 768;
+  ngAfterViewInit(): void 
+  {
+    const video = this.heroVideo.nativeElement;
+    const isMobile = window.innerWidth <= 768;
 
-      video.src = isMobile
-        ? 'assets/videos/smarthome-loop-vertical.mp4'
-        : 'assets/videos/smarthome-completo.mp4';
+    video.src = isMobile
+      ? 'assets/videos/smarthome-loop-vertical.mp4'
+      : 'assets/videos/smarthome-completo.mp4';
 
-      if (!isMobile) {
-        video.onended = () => {
-          video.src = 'assets/videos/smarthome-loop.mp4';
-          video.loop = true;
-          video.play().catch(() => {});
-        };
-      } else {
+    if (!isMobile) {
+      video.onended = () => {
+        video.src = 'assets/videos/smarthome-loop.mp4';
         video.loop = true;
-      }
-
-      video.load();
-      video.play().then(() => {
-        // Autoplay funcionó — oculta el botón
-        this.playOverlay.nativeElement.style.display = 'none';
-      }).catch(() => {
-        // Autoplay bloqueado — muestra el botón
-        this.playOverlay.nativeElement.style.display = 'flex';
-      });
+        video.play().catch(() => {});
+      };
+    } else {
+      video.loop = true;
     }
 
-    startVideo(): void {
-      const video = this.heroVideo.nativeElement;
-      video.play();
+    video.load();
+    video.play().then(() => {
+      // Autoplay funcionó — oculta el botón
       this.playOverlay.nativeElement.style.display = 'none';
-    }
+    }).catch(() => {
+      // Autoplay bloqueado — muestra el botón
+      this.playOverlay.nativeElement.style.display = 'flex';
+    });
+  }
+
+  startVideo(): void {
+    const video = this.heroVideo.nativeElement;
+    video.play();
+    this.playOverlay.nativeElement.style.display = 'none';
+  }
+
+  scrollTo(sectionId: string) {
+  const el = document.getElementById(sectionId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 }

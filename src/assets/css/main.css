@@ -472,6 +472,7 @@ input, select, textarea {
 	form select,
 	form textarea {
 		-webkit-appearance: none;
+		appearance: none;
 		display: block;
 		border: 0;
 		background: #fafafa;

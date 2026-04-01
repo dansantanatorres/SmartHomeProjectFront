@@ -24,7 +24,7 @@ export class NavbarComponent {
     const startY = window.scrollY;
     const distance = Math.abs(targetY - startY);
 
-    const baseDuration = 50;
+    const baseDuration = 0;
     const duration = baseDuration + distance * 2;
     const startTime = performance.now();
 

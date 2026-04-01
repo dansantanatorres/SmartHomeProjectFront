@@ -3,8 +3,19 @@
     <!--<video #heroVideo autoplay muted playsinline></video>-->
     <video #heroVideo autoplay muted playsinline preload="auto"></video>
 
-    <div class="play-overlay" #playOverlay (click)="startVideo()">
+    <!--<div class="play-overlay" #playOverlay (click)="startVideo()">
         <div class="play-btn">▶</div>
+    </div>-->
+    <div class="play-overlay" #playOverlay>
+        <div class="play-content">
+            <div class="play-btn" (click)="startVideo()">▶</div>
+            <div class="promo-banner">
+            <span class="promo-icon">🎉</span>
+            <span class="promo-title">Launch Offer</span>
+            <span class="promo-subtitle">First 3 months at 50% off</span>
+            <button class="promo-btn" (click)="scrollTo('plans')">Explore Plans</button>
+            </div>
+        </div>
     </div>
 
     <div class="overlay">
