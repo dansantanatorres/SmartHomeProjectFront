@@ -7,3 +7,76 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import "../assets/css/fontawesome-all.min.css";
 
+
+.promo-strip {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 90010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #c9a227;
+  backdrop-filter: blur(4px);
+  min-height: 40px;
+
+  .promo-strip-text {
+    color: #f5c000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+
+  .promo-strip-btn {
+    background: #f5c000;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 15px;
+    color: #111;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: #ddb200;
+      transform: scale(1.05);
+    }
+  }
+
+  // 📱 Móvil
+  @media (max-width: 768px) {
+    top: 62px;
+    padding: 6px 15px;
+
+    .promo-strip-btn {
+      display: none; // ← oculta el botón
+    }
+
+    .promo-strip-text {
+      font-size: 0.75rem;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .promo-close {
+    display: block !important;
+  }
+  }
+
+  // 💻 Notebook
+  @media (min-width: 769px) and (max-width: 1440px) {
+    top: 50px;
+  }
+
+  // 🖥️ Monitor
+  @media (min-width: 1441px) {
+    top: 70px;
+  }
+}

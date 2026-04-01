@@ -1,30 +1,27 @@
 <div class="inner video-section">
-    
-    <!--<video #heroVideo autoplay muted playsinline></video>-->
-    <video #heroVideo autoplay muted playsinline preload="auto"></video>
-
-    <!--<div class="play-overlay" #playOverlay (click)="startVideo()">
-        <div class="play-btn">▶</div>
-    </div>-->
-    <div class="play-overlay" #playOverlay>
-        <div class="play-content">
-            <div class="play-btn" (click)="startVideo()">▶</div>
-            <div class="promo-banner">
-            <span class="promo-icon">🎉</span>
-            <span class="promo-title">Launch Offer</span>
-            <span class="promo-subtitle">First 3 months at 50% off</span>
-            <button class="promo-btn" (click)="scrollTo('plans')">Explore Plans</button>
-            </div>
+  <video #heroVideo autoplay muted playsinline preload="auto"></video>
+  
+  <div class="play-overlay" #playOverlay>
+    <div class="play-content">
+    <button class="promo-close" (click)="startVideo()">✕</button>
+    <div class="promo-banner">
+        <span class="promo-icon">🎉</span>
+        <span class="promo-title">{{ 'PROMO.TITLE' | translate }}</span>
+        <span class="promo-subtitle">{{ 'PROMO.SUBTITLE' | translate }}</span>
+        <div class="promo-actions">
+        <button class="promo-btn" (click)="startVideo(); scrollTo('plans')">
+            {{ 'PROMO.BUTTON' | translate }}
+        </button>
         </div>
     </div>
-
-    <div class="overlay">
-        <header>
-            <!--<a (click)="scrollTo('solutions')"><img src="/assets/images/zentrixnest-logo-small.png" alt="ZentrixNest Logo" class="main-logo"></a>-->
-            <p class="hero-slogan">
-                Smart Home. <span>{{ 'HEADER.TITLE' | translate }}</span>
-            </p>
-        </header>
     </div>
-    
+  </div>
+
+  <div class="overlay">
+    <header>
+      <p class="hero-slogan">
+        Smart Home. <span>{{ 'HEADER.TITLE' | translate }}</span>
+      </p>
+    </header>
+  </div>
 </div>

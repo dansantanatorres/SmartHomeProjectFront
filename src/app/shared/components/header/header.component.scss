@@ -1,66 +1,20 @@
-/****video extendido al maximo***/
-
-/*.video-section {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 44px);  // ← resta la altura del nav
-  margin-top: 44px;             // ← empuja la sección debajo del nav
-
-  video {
-    position: absolute;
-    top: 0;        // ← ya no necesita el 1.5em
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;        // ← igual, a 0
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 1;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .video-section {
-    height: calc(60vh - 62px);  // ← en móvil resta la altura del nav móvil
-    margin-top: 62px;
-  }
-}*/
-
 .video-section {
   position: relative;
   width: 100%;
   height: calc(100vh - 44px);
   margin-top: 44px;
   overflow: hidden;
-  background: #000;            // ← bordes oscuros a los lados
+  background: #000;
 
   video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;               // ← no fuerza el ancho
-    height: 100%;              // ← llena el alto
-    min-width: unset;          // ← elimina el min-width que forzaba el estiramiento
-    object-fit: contain;       // ← mantiene proporción sin pixelar
+    width: auto;
+    height: 100%;
+    min-width: unset;
+    object-fit: contain;
     z-index: 0;
   }
 
@@ -75,46 +29,34 @@
     z-index: 1;
   }
 
-  /*.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-  }*/
-
   .overlay {
     position: absolute;
     top: 17%;
-    right: 8%;                         // ← borde derecho del contenedor
+    right: 8%;
     transform: translateY(-50%);
     z-index: 2;
     text-align: right;
-    padding-right: 1.5em;             // ← pequeño margen del borde
-    max-width: 300px;                 // ← limita el ancho del texto
+    padding-right: 1.5em;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .video-section {
-    height: calc(100vh - 62px);   // ← full height en móvil también
+    height: calc(100vh - 62px);
     margin-top: 62px;
     background: #000;
 
     video {
       position: relative;
-      top: 40%;
-      //left: 50%;
+      //top: 40%; 
       transform: translate(-50%, -50%);
-      //width: 100%;                // ← ocupa todo el ancho
-      //height: auto;               // ← altura proporcional
-      min-height: 100%;           // ← garantiza que llene
-      object-fit: cover;          // ← cover en móvil portrait
+      min-height: 100%;
+      object-fit: cover;
     }
 
     .overlay {
-      top: 20%;
+      top: 27%;
       right: auto;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -125,24 +67,6 @@
   }
 }
 
-/*.play-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  cursor: pointer;
-  background: rgba(0,0,0,0.3);
-
-  .play-btn {
-    font-size: 80px;
-    color: white;
-    opacity: 0.8;
-  }
-}*/
-
 .play-overlay {
   position: absolute;
   top: 0; left: 0;
@@ -151,26 +75,47 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  cursor: default;
-  background: rgba(0, 0, 0, 0.55);
+  background: url('/assets/images/video-poster.jpg') center/cover no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+  }
 
   .play-content {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-  }
 
-  .play-btn {
-    font-size: 80px;
-    color: white;
-    opacity: 0.8;
-    cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s;
+    .promo-close {
+      align-self: flex-end;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 50%;
+      width: 28px !important;
+      height: 28px !important;
+      min-width: 28px !important;
+      max-width: 28px !important;
+      min-height: 28px !important;
+      max-height: 28px !important;
+      padding: 0 !important;
+      color: #fff;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: background 0.3s;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      box-sizing: border-box !important;
 
-    &:hover {
-      transform: scale(1.1);
-      opacity: 1;
+      &:hover { background: rgba(255,255,255,0.2); }
     }
   }
 
@@ -178,19 +123,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid #c9a227;
     border-radius: 12px;
-    padding: 20px 30px;
+    padding: 25px 35px;
 
-    .promo-icon {
-      font-size: 1.5rem;
-    }
+    .promo-icon { font-size: 1.8rem; }
 
     .promo-title {
       color: #f5c000;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
@@ -201,15 +144,20 @@
       opacity: 0.9;
     }
 
+    .promo-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      align-items: center;
+    }
+
     .promo-btn {
-      margin-top: 8px;
       background: #f5c000;
       border: none;
       border-radius: 8px;
       padding: 10px 25px;
       color: #111;
       font-weight: bold;
-      font-size: 0.95rem;
       cursor: pointer;
       transition: background 0.3s, transform 0.3s;
 
@@ -221,8 +169,17 @@
   }
 
   @media (max-width: 768px) {
+    .play-content {
+      //width: 90%;
+      width: auto; // ← cambia de 90% a auto
+    }
+
     .promo-banner {
-      padding: 15px 20px;
+      //padding: 20px;
+      //width: 100%;
+      padding: 20px 25px;
+      width: auto; // ← cambia de 100% a auto
+
       .promo-title { font-size: 1.1rem; }
       .promo-subtitle { font-size: 0.85rem; }
     }

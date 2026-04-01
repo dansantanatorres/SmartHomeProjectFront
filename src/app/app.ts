@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation  } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { LanguageService } from './core/services/language.service';
 
 @Component({
@@ -9,14 +9,19 @@ import { LanguageService } from './core/services/language.service';
   standalone: false
 })
 export class AppComponent {
- 
+  showStrip = false;
+
   constructor(private langService: LanguageService) {
-    this.langService.init(); // Carga idioma guardado o por defecto
+    this.langService.init();
   }
+
+  onVideoStarted() {
+    this.showStrip = true;
+  }
+
   scrollTo(sectionId: string) {
     const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+
 }

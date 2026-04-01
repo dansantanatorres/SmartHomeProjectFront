@@ -8,8 +8,18 @@
     <!-- Language -->
     <app-language-switcher></app-language-switcher>
 
+    <!-- Promo Banner Franja -->
+    <div class="promo-strip" *ngIf="showStrip">
+      <span class="promo-strip-text" (click)="scrollTo('plans')">
+        🎉 {{ 'PROMO.TITLE' | translate }} — {{ 'PROMO.SUBTITLE' | translate }}
+      </span>
+      <!--<button class="promo-strip-btn" (click)="scrollTo('plans')">
+        {{ 'PROMO.BUTTON' | translate }}
+      </button>-->
+    </div>
+
     <!-- Inner -->
-    <app-header></app-header>
+    <app-header (videoStarted)="onVideoStarted()"></app-header>
   </div>
 
   <!-- Solutions -->

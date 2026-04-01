@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,7 +12,7 @@ export class HeaderComponent implements AfterViewInit{
 
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
   @ViewChild('playOverlay') playOverlay!: ElementRef;
-
+  @Output() videoStarted = new EventEmitter<void>();
   /*ngAfterViewInit(): void {
     const video = this.heroVideo.nativeElement;
 
@@ -31,31 +32,27 @@ export class HeaderComponent implements AfterViewInit{
     };
   }*/
 
-  ngAfterViewInit(): void 
-  {
+  ngAfterViewInit(): void {
     const video = this.heroVideo.nativeElement;
     const isMobile = window.innerWidth <= 768;
 
-    video.src = isMobile
-      ? 'assets/videos/smarthome-loop-vertical.mp4'
-      : 'assets/videos/smarthome-completo.mp4';
-
-    if (!isMobile) {
+    if (isMobile) {
+      video.src = 'assets/videos/smarthome-loop-vertical.mp4';
+      video.loop = true;
+    } else {
+      video.src = 'assets/videos/smarthome-completo.mp4';
       video.onended = () => {
         video.src = 'assets/videos/smarthome-loop.mp4';
         video.loop = true;
         video.play().catch(() => {});
       };
-    } else {
-      video.loop = true;
     }
 
     video.load();
     video.play().then(() => {
-      // Autoplay funcionó — oculta el botón
       this.playOverlay.nativeElement.style.display = 'none';
+      this.videoStarted.emit(); // ← notifica al app que el video arrancó
     }).catch(() => {
-      // Autoplay bloqueado — muestra el botón
       this.playOverlay.nativeElement.style.display = 'flex';
     });
   }
@@ -63,9 +60,13 @@ export class HeaderComponent implements AfterViewInit{
   startVideo(): void {
     const video = this.heroVideo.nativeElement;
     video.play();
-    this.playOverlay.nativeElement.style.display = 'none';
+    // Fade out del overlay
+    const overlay = this.playOverlay.nativeElement;
+    overlay.style.transition = 'opacity 0.8s ease';
+    overlay.style.opacity = '0';
+    setTimeout(() => overlay.style.display = 'none', 800);
+    this.videoStarted.emit();
   }
-
   scrollTo(sectionId: string) {
   const el = document.getElementById(sectionId);
   if (el) {

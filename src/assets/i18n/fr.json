@@ -106,5 +106,10 @@
   "FOOTER":{
     "RIGHTS": "Sans titre. Tous droits réservés.",
     "DESIGN": "Conception."
+  },
+  "PROMO": {
+    "TITLE": "Offre de Lancement",
+    "SUBTITLE": "3 premiers mois à 50% de réduction",
+    "BUTTON": "Voir les Forfaits"
   }
 }
