@@ -25,18 +25,20 @@ export class HomeComponent {
   _lang = ''; 
   
   onSubmit() {
-    console.log('FORM COMPLETO:', this.form);
+    //console.log('FORM COMPLETO:', this.form);
   }
 
   get solutions() {
     return [
-      { title: this.translate.instant('HOME.SOLUTION_CARDS.S1.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S1.TEXT'), icons: ['conexion50y.png'] },
-      { title: this.translate.instant('HOME.SOLUTION_CARDS.S2.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S2.TEXT'), icons: ['lights50y.png'] },
-      { title: this.translate.instant('HOME.SOLUTION_CARDS.S3.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S3.TEXT'), icons: ['climate50y.png','eco50y.png'] },
-      { title: this.translate.instant('HOME.SOLUTION_CARDS.S4.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S4.TEXT'), icons: ['cloud50y.png'] },
-      { title: this.translate.instant('HOME.SOLUTION_CARDS.S5.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S5.TEXT'), icons: ['autoplay50y.png'] }
+      { title: this.translate.instant('HOME.SOLUTION_CARDS.S1.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S1.TEXT'), icons: ['conexion50y.png'], image: 'assets/images/solutions/integration.png' },
+      { title: this.translate.instant('HOME.SOLUTION_CARDS.S2.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S2.TEXT'), icons: ['lights50y.png'], image: 'assets/images/solutions/lighting.png' },
+      { title: this.translate.instant('HOME.SOLUTION_CARDS.S3.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S3.TEXT'), icons: ['climate50y.png'], image: 'assets/images/solutions/climate.png' },
+      //{ title: this.translate.instant('HOME.SOLUTION_CARDS.S3.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S3.TEXT'), icons: ['climate50y.png','eco50y.png'] },
+      { title: this.translate.instant('HOME.SOLUTION_CARDS.S4.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S4.TEXT'), icons: ['cloud50y.png'], image: 'assets/images/solutions/security.png' },
+      { title: this.translate.instant('HOME.SOLUTION_CARDS.S5.TITLE'), text: this.translate.instant('HOME.SOLUTION_CARDS.S5.TEXT'), icons: ['autoplay50y.png'], image: 'assets/images/solutions/custom.png' }
     ];
   }
+
 
   get plans() {
     return [

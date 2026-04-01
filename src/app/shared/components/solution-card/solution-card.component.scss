@@ -1,0 +1,34 @@
+.solution-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+  }
+}
+.icon {
+  background: rgba(201, 162, 39, 0.15);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c9a227, transparent);
+  margin: 1rem 0;
+}
+.icon, .h2, hr, p {
+    position: relative;
+    z-index: 1;
+  }

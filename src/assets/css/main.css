@@ -1752,3 +1752,76 @@ input, select, textarea {
     width: 22px;
   }
 }
+
+
+
+/*.solution-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: #c9a227;
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+    transform: translateY(-5px);
+  }
+}*/
+
+/*
+.solution-card {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('/assets/images/initial1_2.png') center/cover;
+    opacity: 0.08; 
+    transition: opacity 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 0.15; 
+  }
+}
+.icon {
+  background: rgba(201, 162, 39, 0.15);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c9a227, transparent);
+  margin: 1rem 0;
+}
+
+.plan-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: #c9a227;
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+    transform: translateY(-5px);
+  }
+}
+.icon-plans {
+  background: rgba(201, 162, 39, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/

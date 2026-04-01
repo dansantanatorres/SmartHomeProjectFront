@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   templateUrl: './solution-card.component.html'
 })
 export class SolutionCardComponent {
-  @Input() data!: { title: string; text: string; icons: string[] };
+  @Input() data!: { title: string; text: string; icons: string[]; image: string };
 }
