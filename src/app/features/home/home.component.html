@@ -18,8 +18,11 @@
 
     <!-- Plans -->
     <section id="plans" class="plans-section">
-      <h1>{{ 'HOME.PLANS.TITLE_1' | translate }} <span>{{ 'HOME.PLANS.TITLE_2' | translate }}</span></h1>
-
+      <!--<h1>{{ 'HOME.PLANS.TITLE_1' | translate }} <span>{{ 'HOME.PLANS.TITLE_2' | translate }}</span></h1>-->
+      <h1>
+        <span class="hide-mobile">{{ 'HOME.PLANS.TITLE_1' | translate }} </span>
+        <span>{{ 'HOME.PLANS.TITLE_2' | translate }}</span>
+      </h1>
       <div class="plans-container">
         <app-plan-card 
           *ngFor="let p of plans" 

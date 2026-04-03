@@ -52,7 +52,8 @@ export class HomeComponent {
           this.translate.instant('HOME.PLAN_CARDS.P1.F3')
         ],
         ideal: this.translate.instant('HOME.PLAN_CARDS.P1.IDEAL'),
-        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CONSULT')
+        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CONSULT'),
+        image: 'assets/images/plans/p1.png'
       },
       {
         title: this.translate.instant('HOME.PLAN_CARDS.P2.TITLE'),
@@ -64,7 +65,9 @@ export class HomeComponent {
           this.translate.instant('HOME.PLAN_CARDS.P2.F3')
         ],
         ideal: this.translate.instant('HOME.PLAN_CARDS.P2.IDEAL'),
-        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CONSULT')
+        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CONSULT'),
+        image: 'assets/images/plans/p2.png',
+        isPopular: true
       },
       {
         title: this.translate.instant('HOME.PLAN_CARDS.P3.TITLE'),
@@ -76,7 +79,8 @@ export class HomeComponent {
           this.translate.instant('HOME.PLAN_CARDS.P3.F3')
         ],
         ideal: this.translate.instant('HOME.PLAN_CARDS.P3.IDEAL'),
-        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CUSTOM')
+        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_CUSTOM'),
+        image: 'assets/images/plans/p3.png'
       },
       {
         title: this.translate.instant('HOME.PLAN_CARDS.P4.TITLE'),
@@ -87,7 +91,8 @@ export class HomeComponent {
           this.translate.instant('HOME.PLAN_CARDS.P4.F2')
         ],
         ideal: this.translate.instant('HOME.PLAN_CARDS.P4.IDEAL'),
-        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_BUILD')
+        buttonText: this.translate.instant('HOME.PLAN_CARDS.BUTTON_BUILD'),
+        image: 'assets/images/plans/p4.png'
       }
     ];
   }

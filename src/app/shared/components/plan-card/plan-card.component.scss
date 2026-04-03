@@ -1,0 +1,158 @@
+.plan-card.popular {
+  border: 1px solid #f5c000;
+  box-shadow: 0 0 25px rgba(245, 192, 0, 0.3);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4d4802;;
+  border: 1px solid #c9a227;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/****descomnetar esto si deseas ver imagen de fondo en las card, y ademas se debe cambiar el nombre de las imagenes de cada una en la carpeta plans***/
+
+/*
+.plan-card {
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  padding: 25px;
+  width: 260px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  // Overlay oscuro sobre la imagen
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    transition: background 0.3s;
+    z-index: 0;
+  }
+
+  // Hover — imagen más visible
+  &:hover::before {
+    background: rgba(0, 0, 0, 0.60);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 -10px 20px rgba(201, 162, 39, 0.35), 0 10px 20px rgba(201, 162, 39, 0.35);
+    border: 1px solid #c9a227;
+  }
+
+  // Todo el contenido encima del overlay
+  .popular-badge, .card-header, .price, hr, p, .ideal, .card-footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  hr {
+    position: static !important;
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #0a0a0a, #f5c000 50%, #0a0a0a);
+    margin: 10px 0 15px;
+    margin-bottom: 1rem !important;
+  }
+
+  p {
+    font-size: 0.8em;
+    margin-bottom: 0px;
+    text-align: start;
+  }
+
+  .icon-plans {
+    font-size: 2rem;
+    background: rgba(201, 162, 39, 0.15);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    color: #f5c000;
+    font-size: 1.2em;
+  }
+
+  ul {
+    text-align: justify;
+    font-size: 0.90rem;
+    padding-left: 0px;
+  }
+
+  .ideal {
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    line-height: 1.2;
+  }
+
+  button {
+    background: #f5c000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: #ddb200;
+      transform: scale(1.05);
+    }
+  }
+
+  .card-footer {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  &.popular {
+    border: 1px solid #f5c000;
+    box-shadow: 0 0 25px rgba(245, 192, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 auto;
+    min-width: 260px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 280px;
+    height: 550px;
+
+    .ideal {
+      margin-top: 2rem;
+      line-height: 1.3;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    flex: 0 0 auto;
+    min-width: 260px;
+    height: 440px;
+  }
+}*/

@@ -29,22 +29,23 @@
       "TITLE_2": "Plan de Hogar Inteligente"
     },
     "PLAN_CARDS": {
-      "NOTE": "(*) Ten en cuenta que los dispositivos inteligentes no están incluidos en el precio del servicio y se venden por separado.",
-      "BUTTON_CONSULT": "Reservar Consulta Gratuita",
-      "BUTTON_CUSTOM": "Solicitar Plan Personalizado",
+      "NOTE": "(*) Los dispositivos inteligentes no están incluidos en el precio del servicio y se venden por separado.",
+      "BUTTON_CONSULT": "Consulta Gratuita",
+      "BUTTON_CUSTOM": "Cotización Gratuita",
       "BUTTON_BUILD": "Arma tu Configuración",
+      "MOST_POPULAR": "⭐ Más Popular",
       "P1": {
         "TITLE": "Inicial",
         "PRICE": "Desde $299 CAD",
         "F1": "Integración con asistente de voz.",
         "F2": "Instalación de 1 a 2 dispositivos inteligentes.",
-        "F3": "Configuración básica y pruebas del sistema.",
+        "F3": "Configuración y pruebas del sistema.",
         "IDEAL": "Perfecto para quienes se inician en el hogar inteligente."
       },
       "P2": {
         "TITLE": "Esencial",
         "PRICE": "Desde $599 CAD",
-        "F1": "Control de 3 a 5 dispositivos inteligentes.",
+        "F1": "Control de 3 a 5 dispositivos.",
         "F2": "Integración con smartphone y voz.",
         "F3": "Escenas de automatización personalizadas.",
         "IDEAL": "Ideal para mejorar áreas clave de tu hogar."
@@ -52,7 +53,7 @@
       "P3": {
         "TITLE": "Hogar Completo",
         "PRICE": "Cotización",
-        "F1": "Integración inteligente de todo el hogar.",
+        "F1": "Integración inteligente del hogar.",
         "F2": "Automatizaciones avanzadas y acceso remoto.",
         "F3": "Control completo por voz y app.",
         "IDEAL": "Diseñado para un hogar completamente conectado."
@@ -61,7 +62,7 @@
         "TITLE": "Personalizado",
         "PRICE": "Precio Flexible",
         "F1": "Instalación y configuración por dispositivo.",
-        "F2": "Agrega interruptores, cámaras, enchufes y automatizaciones a medida.",
+        "F2": "Agrega interruptores, dispositivos y automatizaciones a medida.",
         "IDEAL": "Perfecto para una configuración de hogar inteligente a tu medida."
       }
     },
@@ -109,7 +110,9 @@
   },
   "PROMO": {
     "TITLE": "Oferta de Lanzamiento",
+    "TITLE_SHORT": "Oferta Lanzamiento",
     "SUBTITLE": "Primeros 3 meses con 50% de descuento",
+    "SUBTITLE_SHORT": "Primeros 3 meses -50%",
     "BUTTON": "Ver Planes"
   }
 }

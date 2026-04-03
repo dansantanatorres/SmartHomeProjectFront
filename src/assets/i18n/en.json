@@ -30,9 +30,10 @@
     },
     "PLAN_CARDS": {
       "NOTE": "(*) Please note that smart devices are not included in the service price and are sold separately.",
-      "BUTTON_CONSULT": "Book Free Consultation",
+      "BUTTON_CONSULT": "Free Consultation",
       "BUTTON_CUSTOM": "Request Custom Plan",
       "BUTTON_BUILD": "Build Your Setup",
+      "MOST_POPULAR": "⭐ Most Popular",
       "P1": {
         "TITLE": "Starter",
         "PRICE": "Starting at $299 CAD",
@@ -109,7 +110,9 @@
   },
   "PROMO": {
     "TITLE": "Launch Offer",
+    "TITLE_SHORT": "Launch Offer",
     "SUBTITLE": "First 3 months at 50% off",
+    "SUBTITLE_SHORT": "First 3 months at 50% off",
     "BUTTON": "Explore Plans"
   }
 }

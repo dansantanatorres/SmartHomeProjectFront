@@ -17,5 +17,7 @@ export class PlanCardComponent {
     features: string[];
     ideal: string;
     buttonText: string;
+    isPopular?: boolean;
+    image: string;
   };
 }

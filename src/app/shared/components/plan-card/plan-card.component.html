@@ -1,16 +1,18 @@
-<div class="plan-card">
-    <div class="card-header">
+<!--<div class="plan-card" [class.popular]="data.isPopular" [ngStyle]="{'background-image': 'url(' + data.image + ')'}">-->
+<div class="plan-card" [class.popular]="data.isPopular">
+  <div class="popular-badge" *ngIf="data.isPopular">{{ 'HOME.PLAN_CARDS.MOST_POPULAR' | translate }}</div>
+  <div class="card-header">
     <div class="icon-plans">
-        <img [src]="'/assets/images/icons/' + data.icon" />
+      <img [src]="'/assets/images/icons/' + data.icon" />
     </div>
     <h2>{{ data.title }}</h2>
-    </div>
-    <div class="price">{{ data.price }}</div>
-    <hr>
-    <p *ngFor="let f of data.features">• {{ f }}</p>
-    <p class="ideal">{{ data.ideal }}</p>
-    <div class="card-footer">
-    <p class="note">{{ 'HOME.PLAN_CARDS.NOTE' | translate }}</p>  <!-- ← cambiado -->
+  </div>
+  <div class="price">{{ data.price }}</div>
+  <hr>
+  <p *ngFor="let f of data.features">✓ {{ f }}</p>
+  <p class="ideal">{{ data.ideal }}</p>
+  <div class="card-footer">
+    <p class="note">{{ 'HOME.PLAN_CARDS.NOTE' | translate }}</p>
     <button>{{ data.buttonText }}</button>
-    </div>
+  </div>
 </div>

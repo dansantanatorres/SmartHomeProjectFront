@@ -11,7 +11,11 @@
     <!-- Promo Banner Franja -->
     <div class="promo-strip" *ngIf="showStrip">
       <span class="promo-strip-text" (click)="scrollTo('plans')">
-        🎉 {{ 'PROMO.TITLE' | translate }} — {{ 'PROMO.SUBTITLE' | translate }}
+        🎉 <span class="hide-mobile">{{ 'PROMO.TITLE' | translate }}</span>
+            <span class="show-mobile">{{ 'PROMO.TITLE_SHORT' | translate }}</span>
+             — 
+            <span class="hide-mobile">{{ 'PROMO.SUBTITLE' | translate }}</span>
+            <span class="show-mobile">{{ 'PROMO.SUBTITLE_SHORT' | translate }}</span>
       </span>
       <!--<button class="promo-strip-btn" (click)="scrollTo('plans')">
         {{ 'PROMO.BUTTON' | translate }}

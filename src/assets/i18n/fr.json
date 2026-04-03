@@ -30,21 +30,22 @@
     },
     "PLAN_CARDS": {
       "NOTE": "(*) Veuillez noter que les appareils intelligents ne sont pas inclus dans le prix du service et sont vendus séparément.",
-      "BUTTON_CONSULT": "Réserver une Consultation Gratuite",
-      "BUTTON_CUSTOM": "Demander un Plan Personnalisé",
-      "BUTTON_BUILD": "Créer Votre Configuration",
+      "BUTTON_CONSULT": "Consultation Gratuite",
+      "BUTTON_CUSTOM": "Devis gratuit",
+      "BUTTON_BUILD": "Construire Mon Setup",
+      "MOST_POPULAR": "⭐ Le Plus Populaire",
       "P1": {
         "TITLE": "Débutant",
         "PRICE": "À partir de 299 $ CAD",
         "F1": "Intégration avec assistant vocal.",
         "F2": "Installation de 1 à 2 appareils intelligents.",
-        "F3": "Configuration de base et tests du système.",
+        "F3": "Configuration et tests du système.",
         "IDEAL": "Parfait pour les nouveaux utilisateurs de maison intelligente."
       },
       "P2": {
         "TITLE": "Essentiel",
         "PRICE": "À partir de 599 $ CAD",
-        "F1": "Contrôle de 3 à 5 appareils intelligents.",
+        "F1": "Contrôle de 3 à 5 appareils.",
         "F2": "Contrôle par smartphone et voix.",
         "F3": "Scènes d'automatisation personnalisées.",
         "IDEAL": "Idéal pour améliorer les zones clés de votre maison."
@@ -52,7 +53,7 @@
       "P3": {
         "TITLE": "Maison Complète",
         "PRICE": "Devis Personnalisé",
-        "F1": "Intégration intelligente de toute la maison.",
+        "F1": "Intégration intelligente de la maison.",
         "F2": "Automatisations avancées et accès à distance.",
         "F3": "Contrôle complet par voix et app.",
         "IDEAL": "Conçu pour une maison entièrement connectée."
@@ -61,7 +62,7 @@
         "TITLE": "Personnalisé",
         "PRICE": "Tarification Flexible",
         "F1": "Installation et configuration par appareil.",
-        "F2": "Ajoutez interrupteurs, caméras, prises et automatisations sur mesure.",
+        "F2": "Ajoutez interrupteurs, dispositifs et automatisations sur mesure.",
         "IDEAL": "Parfait pour une configuration de maison intelligente personnalisée."
       }
     },
@@ -109,7 +110,9 @@
   },
   "PROMO": {
     "TITLE": "Offre de Lancement",
+    "TITLE_SHORT": "Offre de Lancement",
     "SUBTITLE": "3 premiers mois à 50% de réduction",
+    "SUBTITLE_SHORT": "3 mois à -50%",
     "BUTTON": "Voir les Forfaits"
   }
 }

@@ -48,9 +48,14 @@
     }
   }
 
+  .show-mobile { display: none; }
+
   // 📱 Móvil
   @media (max-width: 768px) {
-    top: 62px;
+    .hide-mobile { display: none; }
+    .show-mobile { display: inline; }
+
+    top: 45px;
     padding: 6px 15px;
 
     .promo-strip-btn {

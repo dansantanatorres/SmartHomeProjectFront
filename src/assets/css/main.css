@@ -904,7 +904,7 @@ input, select, textarea {
 		.button {
 			display: block;
 			padding: 0;
-			line-height: 3em;
+			/*line-height: 3em;*/
 			width: 100%;
 		}
 
@@ -1038,7 +1038,11 @@ input, select, textarea {
 
 	@media (max-width: 768px) {
 		section, .wrapper, #banner, .carousel {
-			padding: 1rem;
+			/*padding: 1rem;*/
+			padding-top: 0.5rem;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
+			padding-left: 1rem;
 		}
 	}
 
@@ -1281,7 +1285,9 @@ input, select, textarea {
 			scroll-behavior: smooth;
 			padding-bottom: 10px;
 			justify-content: flex-start;
-			margin-top: 10%;
+			/*margin-top: 10%;*/
+			padding-top: 20px;
+			padding-left: 10px;
 		}
 
 		.solution-container::-webkit-scrollbar {
@@ -1297,13 +1303,33 @@ input, select, textarea {
 		.solution-title h2 {
 			color: #f5c000;
 			margin-bottom: 10px;
-			font-size: 2em;
+			font-size: 1.5em;
+		}
+
+		.solution-title p {
+			display: none;
+		}
+
+		.hide-mobile {
+			display: none;
 		}
 	}
 
 	@media screen and (min-width: 1680px) {
 		.solution-card {
 			width: 250px;
+		}
+	}
+
+	@media screen and (max-width: 1440px) {
+		.solution-section {
+			padding: 50px 20px;
+		}
+	}
+
+	@media screen and (min-width: 1441px){
+		.solution-title{
+			margin-bottom: 30px;
 		}
 	}
 
@@ -1409,40 +1435,6 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	@media (max-width: 768px) {
-		.plans-container {
-			flex-direction: row;
-			flex-wrap: nowrap;
-			overflow-x: auto;
-			gap: 20px;
-			-webkit-overflow-scrolling: touch;
-			scroll-behavior: smooth;
-			padding-bottom: 10px;
-			justify-content: flex-start;
-		}
-
-		.plans-container::-webkit-scrollbar {
-			display: none;
-		}
-
-		.plan-card {
-			flex: 0 0 auto;
-			min-width: 260px;
-		}
-	}
-
-	@media screen and (min-width: 1680px) {
-		.plan-card {
-			width: 280px;
-			height: 550px;
-		}
-
-		.plan-card .ideal {
-			margin-top: 2rem;
-			line-height: 1.3;
-		}
-	}
-
 	@media screen and (max-width: 1440px) {
 		body.homepage #header {
 			min-height: unset;
@@ -1453,7 +1445,81 @@ input, select, textarea {
 			min-width: 260px;
 			height: 440px;
 		}
+
+		.plans-section {
+			padding: 50px 20px;
+		}
+
+		.plans-section h1{
+			margin-bottom: 1.5rem;
+		}
 	}
+
+	@media (max-width: 768px) {
+		.plans-container {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			gap: 20px;
+			-webkit-overflow-scrolling: touch;
+			scroll-behavior: smooth;
+			padding-bottom: 10px;
+			justify-content: flex-start;
+			padding-top: 20px;
+			padding-left: 10px;
+		}
+
+		.plans-container::-webkit-scrollbar {
+			display: none;
+		}
+
+		.plan-card {
+			flex: 0 0 auto;
+			min-width: 260px;
+			height: 380px;
+		}
+
+		.plan-title h1 {
+			color: #f5c000;
+			margin-bottom: 10px;
+			font-size: 2em;
+		}
+
+		.plans-section {
+			padding: 60px 20px 40px;
+		}
+
+		.plans-section h1 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+			color: #fff;
+		}
+
+		.card-header{
+			margin-top: -10px;
+		}
+	}
+
+	@media screen and (min-width: 1680px) {
+		.plan-card {
+			width: 280px;
+			height: 500px;
+		}
+
+		.plan-card .ideal {
+			margin-top: 2rem;
+			line-height: 1.3;
+		}
+	}
+
+	@media screen and (min-width: 1441px){
+		.plans-section h1 {
+			margin-bottom: 3rem;
+			
+		}
+	}
+
+	
 
 /* ============================================
    ABOUT SECTION
@@ -1479,6 +1545,18 @@ input, select, textarea {
 		.about-section {
 			text-align: center;
 			padding: 50px 20px;
+		}
+	}
+
+	@media screen and (max-width: 1440px){
+		.about-section {
+			padding: 80px 20px;
+		}
+	}
+
+	@media screen and (min-width: 1441px){
+		.about-section {
+			padding: 180px 20px;
 		}
 	}
 
@@ -1540,6 +1618,43 @@ input, select, textarea {
 		color: #fff;
 	}
 
+	@media (max-width: 768px) {
+		.contact-section .wrapper {
+			padding: 2em 1.5em;
+		}
+
+		.contact-section .row {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		.contact-section .col-6 {
+			width: 100% !important;
+			padding: 0 !important;
+			box-sizing: border-box;
+		}
+
+		.contact-section input[type="text"],
+		.contact-section input[type="email"] {
+			width: 100% !important;
+			box-sizing: border-box;
+		}
+
+		.contact-section h2 {
+			position: relative;
+			z-index: 1;
+			margin-bottom: 0.5rem;
+		}
+
+		section {
+			padding-top: 1rem;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
+			padding-left: 1rem;
+		}
+	}
+
 /* ============================================
    WHATSAPP FLOATING BUTTON
    ============================================ */
@@ -1584,6 +1699,14 @@ input, select, textarea {
 		0%   { transform: scale(0.9); opacity: 0.7; }
 		70%  { transform: scale(1.3); opacity: 0; }
 		100% { transform: scale(0.9); opacity: 0; }
+	}
+
+	@media (max-width: 768px) {
+		.whatsapp-float {
+			bottom: 0.8em;
+			right: 0.8em;
+			height: 42px;
+		}
 	}
 
 /* ============================================
@@ -1663,6 +1786,7 @@ input, select, textarea {
 		font-size: 0.7rem !important;
 		opacity: 0.7;
 		margin-top: 10px;
+		margin-bottom: 10px !important;
 		line-height: 1.4;
 	}
 
@@ -1671,7 +1795,7 @@ input, select, textarea {
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
-		margin-bottom: 10px;
+		/*margin-bottom: 10px;*/
 	}
 
 		.card-header .icon {
@@ -1724,7 +1848,7 @@ input, select, textarea {
   .about-section {
     /*scroll-margin-top: 62px;*/
 	scroll-margin-top: 44px;
-    padding-top: 0;        /* ← elimina el padding-top de 90px */
+    padding-top: 40px;        /* ← elimina el padding-top de 90px */
   }
 }
 
@@ -1754,75 +1878,11 @@ input, select, textarea {
   }
 }
 
-
-
-/*.solution-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    border-color: #c9a227;
-    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
-    transform: translateY(-5px);
-  }
-}*/
-
-/*
-.solution-card {
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('/assets/images/initial1_2.png') center/cover;
-    opacity: 0.08; 
-    transition: opacity 0.3s;
-  }
-
-  &:hover::before {
-    opacity: 0.15; 
-  }
+@media (max-width: 768px) {
+	h1, h2, h3, h4, h5, h6 {
+	line-height: normal;
+	}
+	.about-title h2 {
+		font-size: 1.50rem;
+	}
 }
-.icon {
-  background: rgba(201, 162, 39, 0.15);
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-}
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #c9a227, transparent);
-  margin: 1rem 0;
-}
-
-.plan-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    border-color: #c9a227;
-    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
-    transform: translateY(-5px);
-  }
-}
-.icon-plans {
-  background: rgba(201, 162, 39, 0.15);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
