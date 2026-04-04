@@ -6,6 +6,7 @@
     "HOME": "Home",
     "SOLUTIONS": "Solutions",
     "PLANS": "Plans",
+    "SUPPORT": "Support",
     "ABOUT": "About Us",
     "CONTACT": "Contact"
   },
@@ -64,6 +65,35 @@
         "F1": "Installation & setup per device.",
         "F2": "Add switches, cameras, plugs & tailor-made automations.",
         "IDEAL": "Perfect for a personalized smart home setup."
+      }
+    },
+    "CARE_PLANS": {
+      "TITLE": "Keep Your Home Smart",
+      "SUBTITLE": "Choose a care plan that fits your needs",
+      "MONTHLY": "Monthly",
+      "ANNUAL": "Annual",
+      "RECOMMENDED": "⭐ Recommended",
+      "BUTTON": "Contact Us",
+      "P1": {
+        "TITLE": "Basic Care",
+        "F1": "✓ Monthly connectivity check",
+        "F2": "✓ Firmware updates included",
+        "F3": "✓ Email support (48h response)"
+      },
+      "P2": {
+        "TITLE": "Smart Care",
+        "F1": "✓ Everything in Basic Care",
+        "F2": "✓ Real-time alerts to your phone",
+        "F3": "✓ Monthly system report by email",
+        "F4": "✓ WhatsApp support (24h response)"
+      },
+      "P3": {
+        "TITLE": "Elite Care",
+        "F1": "✓ Everything in Smart Care",
+        "F2": "✓ Remote access by ZentrixNest",
+        "F3": "✓ Priority 24/7 WhatsApp support",
+        "F4": "✓ Quarterly technical visit",
+        "F5": "✓ Detailed monthly report"
       }
     },
     "ABOUT": {

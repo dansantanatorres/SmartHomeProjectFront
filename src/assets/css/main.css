@@ -1519,6 +1519,249 @@ input, select, textarea {
 		}
 	}
 
+/* ============================================
+SECTION CARE PLANS
+============================================ */
+	.care-section {
+		text-align: center;
+		padding: 30px 20px;
+	}
+
+	.care-title {
+		margin-bottom: 20px;
+
+		h2 {
+			color: #f5c000;
+			font-size: 3em;
+		}
+
+		p {
+			color: #fff;
+			text-align: center;
+		}
+	}
+
+	.care-promo-banner {
+		display: inline-block;
+		background: transparent;
+		border: 1px solid #c9a227;
+		color: #f5c000;
+		font-size: 0.9rem;
+		font-weight: 600;
+		padding: 6px 20px;
+		border-radius: 20px;
+		margin-bottom: 25px;
+	}
+
+	.care-toggle {
+		display: flex;
+		justify-content: center;
+		gap: 0;
+		margin-bottom: 40px;
+
+		button {
+			background: transparent;
+			border: 1px solid #c9a227;
+			color: #fff;
+			padding: 8px 25px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			transition: all 0.3s;
+
+			&:first-child { border-radius: 20px 0 0 20px; }
+			&:last-child  { border-radius: 0 20px 20px 0; }
+
+			&.active {
+			background: #c9a227;
+			color: #111;
+			font-weight: bold;
+			}
+		}
+	}
+
+	.care-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 30px;
+	}
+
+	.care-card {
+		background-color: #111;
+		background-size: cover;
+		background-position: center;
+		border-radius: 15px;
+		padding: 25px;
+		width: 260px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+		transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+		position: relative;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		overflow: visible;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		background: rgba(0, 0, 0, 0.75);
+		transition: background 0.3s;
+		z-index: 0;
+		border-radius: 15px;
+	}
+
+	&:hover::before { background: rgba(0, 0, 0, 0.60); }
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 -10px 20px rgba(201, 162, 39, 0.35), 0 10px 20px rgba(201, 162, 39, 0.35);
+		border: 1px solid #c9a227;
+	}
+
+	&.recommended {
+		border: 1px solid #f5c000;
+		box-shadow: 0 0 25px rgba(245, 192, 0, 0.3);
+	}
+
+	.recommended-badge, .care-card-header, .care-price, hr, p, .care-footer {
+		position: relative;
+		z-index: 1;
+	}
+
+	.recommended-badge {
+		position: absolute;
+		top: -14px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #4d4802;
+		border: 1px solid #c9a227;
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: bold;
+		padding: 2px 12px;
+		border-radius: 20px;
+		white-space: nowrap;
+		z-index: 2;
+	}
+
+	.care-card-header h2 {
+		color: #f5c000;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+
+	.care-price {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/*margin-bottom: 10px;*/
+
+		.price-original {
+		text-decoration: line-through;
+		color: #aaa;
+		font-size: 0.9rem;
+		}
+
+		.price-offer {
+		color: #f5c000;
+		font-size: 1.5rem;
+		font-weight: bold;
+		}
+
+		.price-annual {
+		color: #f5c000;
+		font-size: 1.5rem;
+		font-weight: bold;
+		}
+
+		.price-note {
+		font-size: 0.7rem;
+		color: #aaa;
+		font-style: italic;
+		}
+	}
+
+	hr {
+		position: relative;
+    	z-index: 1;
+		border: 0;
+		height: 2px;
+		/*background: linear-gradient(to right, #0a0a0a, #f5c000 50%, #0a0a0a);*/
+		margin: -10px 0 15px;
+	}
+
+	p {
+		font-size: 0.8em;
+		margin-bottom: 5px;
+		text-align: start;
+	}
+
+	.care-footer {
+		margin-top: auto;
+		text-align: center;
+		padding-top: 15px;
+	}
+
+	.care-btn {
+		display: inline-block;
+		background: #f5c000;
+		border-radius: 8px;
+		padding: 10px 20px;
+		color: #111;
+		font-weight: bold;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background 0.3s, transform 0.3s;
+
+		&:hover {
+		background: #ddb200;
+		transform: scale(1.05);
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex: 0 0 auto;
+		min-width: 260px;
+		height: auto;
+	}
+
+	@media screen and (min-width: 769px) and (max-width: 1440px) {
+		height: 360px;
+	}
+
+	@media screen and (min-width: 1441px) {
+		width: 280px;
+		height: 500px;
+	}
+	}
+
+	@media (max-width: 768px) {
+	.care-section {
+		padding: 60px 20px 40px;
+	}
+
+	.care-title h2 {
+		font-size: 1.5em;
+	}
+
+	.care-container {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		gap: 20px;
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
+		padding-bottom: 10px;
+		justify-content: flex-start;
+		padding-left: 10px;
+	}
+
+	.care-container::-webkit-scrollbar {
+		display: none;
+	}
+	}
 	
 
 /* ============================================

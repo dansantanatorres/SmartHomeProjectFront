@@ -31,6 +31,62 @@
       </div>
     </section>
 
+    <!-- Care Plans -->
+    <section id="care-plans" class="care-section">
+      <div class="care-title">
+        <h2>{{ 'HOME.CARE_PLANS.TITLE' | translate }}</h2>
+        <p>{{ 'HOME.CARE_PLANS.SUBTITLE' | translate }}</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="care-toggle">
+        <button [class.active]="billingCycle === 'monthly'" (click)="billingCycle = 'monthly'">
+          {{ 'HOME.CARE_PLANS.MONTHLY' | translate }}
+        </button>
+        <button [class.active]="billingCycle === 'annual'" (click)="billingCycle = 'annual'">
+          {{ 'HOME.CARE_PLANS.ANNUAL' | translate }} -15%
+        </button>
+      </div>
+
+      <!-- Cards -->
+      <div class="care-container">
+        <div class="care-card" 
+            *ngFor="let c of carePlans"
+            [ngStyle]="{'background-image': 'url(' + c.image + ')'}"
+            [class.recommended]="c.isRecommended">
+          
+          <div class="recommended-badge" *ngIf="c.isRecommended">
+            {{ 'HOME.CARE_PLANS.RECOMMENDED' | translate }}
+          </div>
+
+          <div class="care-card-header">
+            <h2>{{ c.title }}</h2>
+          </div>
+
+          <div class="care-price">
+            <ng-container *ngIf="billingCycle === 'monthly'">
+              <span class="price-original">${{ c.monthlyOriginal }}/mo</span>
+              <span class="price-offer">${{ c.monthlyOffer }}/mo</span>
+              <span class="price-note">{{ 'PROMO.SUBTITLE' | translate }}</span>
+            </ng-container>
+            <ng-container *ngIf="billingCycle === 'annual'">
+              <span class="price-annual">${{ c.annual }}/yr</span>
+            </ng-container>
+          </div>
+
+          <hr>
+
+          <p *ngFor="let f of c.features">{{ f }}</p>
+
+          <div class="care-footer">
+            <a [href]="c.whatsapp" target="_blank" class="care-btn">
+              <i class="fab fa-whatsapp"></i> {{ 'HOME.CARE_PLANS.BUTTON' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About Us -->
     <section id="AbouUs" class="about-section">
       <div class="wrapper style2">

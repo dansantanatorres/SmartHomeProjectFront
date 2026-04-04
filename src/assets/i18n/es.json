@@ -6,6 +6,7 @@
     "HOME": "Inicio",
     "SOLUTIONS": "Soluciones",
     "PLANS": "Planes",
+    "SUPPORT": "Soporte",
     "ABOUT": "Quiénes Somos",
     "CONTACT": "Contáctanos"
   },
@@ -64,6 +65,35 @@
         "F1": "Instalación y configuración por dispositivo.",
         "F2": "Agrega interruptores, dispositivos y automatizaciones a medida.",
         "IDEAL": "Perfecto para una configuración de hogar inteligente a tu medida."
+      }
+    },
+    "CARE_PLANS": {
+      "TITLE": "Mantén Tu Hogar Inteligente",
+      "SUBTITLE": "Elige el plan de soporte que mejor se adapte",
+      "MONTHLY": "Mensual",
+      "ANNUAL": "Anual",
+      "RECOMMENDED": "⭐ Recomendado",
+      "BUTTON": "Contáctanos",
+      "P1": {
+        "TITLE": "Basic Care",
+        "F1": "✓ Revisión mensual de conectividad",
+        "F2": "✓ Actualizaciones de firmware incluidas",
+        "F3": "✓ Soporte por email (respuesta 48h)"
+      },
+      "P2": {
+        "TITLE": "Smart Care",
+        "F1": "✓ Todo lo del Basic Care",
+        "F2": "✓ Alertas en tiempo real al smartphone",
+        "F3": "✓ Reporte mensual por email",
+        "F4": "✓ Soporte por WhatsApp (respuesta 24h)"
+      },
+      "P3": {
+        "TITLE": "Elite Care",
+        "F1": "✓ Todo lo del Smart Care",
+        "F2": "✓ Acceso remoto por ZentrixNest",
+        "F3": "✓ Soporte prioritario 24/7 por WhatsApp",
+        "F4": "✓ Visita técnica trimestral incluida",
+        "F5": "✓ Reporte mensual detallado"
       }
     },
     "ABOUT": {

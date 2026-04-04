@@ -97,6 +97,58 @@ export class HomeComponent {
     ];
   }
 
+  billingCycle: 'monthly' | 'annual' = 'monthly';
+
+  get carePlans() {
+    return [
+      {
+        title: this.translate.instant('HOME.CARE_PLANS.P1.TITLE'),
+        image: 'assets/images/care/c1.jpg',
+        monthlyOriginal: 19,
+        monthlyOffer: 9.50,
+        annual: 193,
+        isRecommended: false,
+        features: [
+          this.translate.instant('HOME.CARE_PLANS.P1.F1'),
+          this.translate.instant('HOME.CARE_PLANS.P1.F2'),
+          this.translate.instant('HOME.CARE_PLANS.P1.F3')
+        ],
+        whatsapp: `https://wa.me/14372182879?text=${encodeURIComponent('Hi! I\'m interested in the Basic Care plan')}`
+      },
+      {
+        title: this.translate.instant('HOME.CARE_PLANS.P2.TITLE'),
+        image: 'assets/images/care/c2.jpg',
+        monthlyOriginal: 35,
+        monthlyOffer: 17.50,
+        annual: 357,
+        isRecommended: true,
+        features: [
+          this.translate.instant('HOME.CARE_PLANS.P2.F1'),
+          this.translate.instant('HOME.CARE_PLANS.P2.F2'),
+          this.translate.instant('HOME.CARE_PLANS.P2.F3'),
+          this.translate.instant('HOME.CARE_PLANS.P2.F4')
+        ],
+        whatsapp: `https://wa.me/14372182879?text=${encodeURIComponent('Hi! I\'m interested in the Smart Care plan')}`
+      },
+      {
+        title: this.translate.instant('HOME.CARE_PLANS.P3.TITLE'),
+        image: 'assets/images/care/c3.jpg',
+        monthlyOriginal: 59,
+        monthlyOffer: 29.50,
+        annual: 601,
+        isRecommended: false,
+        features: [
+          this.translate.instant('HOME.CARE_PLANS.P3.F1'),
+          this.translate.instant('HOME.CARE_PLANS.P3.F2'),
+          this.translate.instant('HOME.CARE_PLANS.P3.F3'),
+          this.translate.instant('HOME.CARE_PLANS.P3.F4'),
+          this.translate.instant('HOME.CARE_PLANS.P3.F5')
+        ],
+        whatsapp: `https://wa.me/14372182879?text=${encodeURIComponent('Hi! I\'m interested in the Elite Care plan')}`
+      }
+    ];
+  }
+
   constructor(private translate: TranslateService) {
     // Re-render cards cuando cambia el idioma
     this.translate.onLangChange.subscribe(() => {});
